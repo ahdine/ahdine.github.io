@@ -1,0 +1,850 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dine A. · Consultant Finance et Audit</title>
+<style>@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@300;400&display=swap');:root{--fond-1:#faf7f2;--fond-2:#f5f0e8;--fond-3:#ede6d8;--fond-carte:#fffefa;--encre:#1a1a2e;--ardoise:#2f2f48;--acier:#50506e;--gris:#6e6e88;--gris-doux:#7a7a92;--sable:#c4b99a;--sable-clair:#d8cdb0;--accent:#6b5b3e;--accent-hover:#8a7550;--trait:#d4c9a8;--ombre-1:rgba(26,26,46,0.06);--ombre-2:rgba(26,26,46,0.12);--rayon:6px;--ease:cubic-bezier(0.22,0.61,0.36,1);--dur-hover:280ms;--dur-ouvrir:450ms;--dur-scroll:700ms;--comp-fin-bg:#f0ece0;--comp-fin-bord:#d4c8a8;--comp-aca-bg:#e8ece8;--comp-aca-bord:#a8c0a8;--comp-mgt-bg:#ece8f0;--comp-mgt-bord:#b8a8c8;--comp-tra-bg:#f0e8e8;--comp-tra-bord:#c8a8a8;--panneau-sombre:#1a1a2e;--panneau-texte:#e8e0d0;--panneau-accent:#b8956a;--panneau-gris:#7a7268;--panneau-trait:#3d3729}[data-theme="sombre"]{--fond-1:#1c1a17;--fond-2:#252219;--fond-3:#2d2a24;--fond-carte:#211f1a;--encre:#ece4d4;--ardoise:#dcd4c4;--acier:#c4bca8;--gris:#a89c88;--gris-doux:#908474;--sable:#a09070;--sable-clair:#6a604a;--accent:#c8a070;--accent-hover:#dab888;--trait:#4a4030;--ombre-1:rgba(0,0,0,0.25);--ombre-2:rgba(0,0,0,0.4);--comp-fin-bg:rgba(200,190,160,0.14);--comp-fin-bord:rgba(200,190,160,0.35);--comp-aca-bg:rgba(170,195,170,0.12);--comp-aca-bord:rgba(170,195,170,0.35);--comp-mgt-bg:rgba(190,175,210,0.12);--comp-mgt-bord:rgba(190,175,210,0.35);--comp-tra-bg:rgba(210,175,175,0.12);--comp-tra-bord:rgba(210,175,175,0.35);--panneau-sombre:#161410;--panneau-texte:#ece4d4;--panneau-accent:#dab888;--panneau-gris:#a89c88;--panneau-trait:#4a4030}*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth;font-size:17px}body{font-family:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;color:var(--encre);background:var(--fond-1);line-height:1.75;font-weight:400;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;overflow-x:hidden;transition:background 0.5s var(--ease),color 0.5s var(--ease)}.nav-haut{position:fixed;top:0;left:0;right:0;z-index:200;background:var(--fond-1);border-bottom:1px solid var(--trait);padding:0 2rem;display:flex;align-items:center;justify-content:space-between;height:48px;opacity:0;transform:translateY(-100%);transition:opacity 0.4s var(--ease),transform 0.4s var(--ease),background 0.5s var(--ease)}.nav-haut.visible{opacity:1;transform:translateY(0)}.nav-haut-liens{display:flex;gap:2rem;list-style:none}.nav-haut-liens a{font-size:0.75rem;letter-spacing:0.08em;text-transform:uppercase;color:var(--gris);text-decoration:none;position:relative;padding:0.8rem 0;font-weight:500;transition:color var(--dur-hover) var(--ease)}.nav-haut-liens a::after{content:'';position:absolute;bottom:0;left:0;width:0;height:1.5px;background:var(--accent);transition:width 0.4s var(--ease)}.nav-haut-liens a:hover,.nav-haut-liens a.active{color:var(--encre)}.nav-haut-liens a.active::after,.nav-haut-liens a:hover::after{width:100%}.nav-haut-nom{font-family:'Cormorant Garamond',Georgia,serif;font-size:1rem;font-weight:600;color:var(--encre)}.nav-lateral{position:fixed;right:1.8rem;top:50%;transform:translateY(-50%);z-index:150;display:flex;flex-direction:column;gap:1.1rem}.nav-lateral a{width:8px;height:8px;border-radius:50%;border:1.5px solid var(--sable);background:transparent;display:block;transition:all 0.4s var(--ease);position:relative}.nav-lateral a:hover,.nav-lateral a.active{background:var(--accent);border-color:var(--accent);transform:scale(1.4)}.nav-lateral a::after{content:attr(data-label);position:absolute;right:1.8rem;top:50%;transform:translateY(-50%) translateX(5px);white-space:nowrap;font-family:'Cormorant Garamond',Georgia,serif;font-size:0.78rem;color:var(--gris-doux);font-weight:500;font-style:italic;letter-spacing:0.02em;opacity:0;transition:opacity 500ms var(--ease),transform 500ms var(--ease),color 500ms var(--ease);pointer-events:none;background:var(--fond-1);padding:0.15rem 0.5rem;border-radius:4px}.nav-lateral a:hover::after{opacity:1;transform:translateY(-50%) translateX(0);color:var(--accent)}.nav-lateral a.active::after{opacity:1;transform:translateY(-50%) translateX(0);color:var(--accent)}.toggle-theme{position:fixed;bottom:2rem;left:2rem;width:42px;height:42px;border-radius:50%;background:var(--fond-carte);border:1px solid var(--trait);cursor:pointer;display:flex;align-items:center;justify-content:center;z-index:200;box-shadow:0 2px 10px var(--ombre-1);transition:all 0.4s var(--ease)}.toggle-theme:hover{box-shadow:0 4px 16px var(--ombre-2);transform:scale(1.08)}.toggle-theme svg{width:18px;height:18px;stroke:var(--acier);fill:none;stroke-width:1.5;transition:stroke 0.3s var(--ease),transform 0.6s var(--ease)}.toggle-theme:hover svg{transform:rotate(30deg)}.toggle-theme .icone-lune{display:none}[data-theme="sombre"] .toggle-theme .icone-soleil{display:none}[data-theme="sombre"] .toggle-theme .icone-lune{display:block}.btn-imprimer{position:fixed;bottom:2rem;right:2rem;width:42px;height:42px;border-radius:50%;background:var(--fond-carte);border:1px solid var(--trait);cursor:pointer;display:flex;align-items:center;justify-content:center;z-index:200;box-shadow:0 2px 10px var(--ombre-1);transition:all 0.4s var(--ease)}.btn-imprimer:hover{box-shadow:0 4px 16px var(--ombre-2);transform:scale(1.08)}.btn-imprimer svg{width:17px;height:17px;stroke:var(--acier);fill:none;stroke-width:1.5}.entete{min-height:100vh;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}.entete::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 25% 45%,rgba(196,185,154,0.12) 0%,transparent 55%),radial-gradient(ellipse at 75% 25%,rgba(107,91,62,0.05) 0%,transparent 45%);pointer-events:none}.entete-contenu{text-align:center;position:relative;z-index:2;padding:2rem}.surtitre{font-family:'Inter',sans-serif;font-size:0.72rem;letter-spacing:0.4em;text-transform:uppercase;color:var(--gris-doux);margin-bottom:2.5rem;font-weight:500}.entete-contenu h1{font-family:'Cormorant Garamond',Georgia,serif;font-size:clamp(2.8rem,6vw,4.8rem);font-weight:700;color:var(--encre);letter-spacing:-0.025em;line-height:1.1;margin-bottom:0.3rem;min-height:1.2em}.curseur-ecriture{display:inline-block;width:2px;height:0.85em;background:var(--accent);margin-left:3px;vertical-align:baseline;animation:clignotement 0.9s ease-in-out infinite}@keyframes clignotement{0%,100%{opacity:1}50%{opacity:0}}.titre-fonction{font-family:'Cormorant Garamond',Georgia,serif;font-size:clamp(1.05rem,2.5vw,1.45rem);font-weight:400;font-style:italic;color:var(--acier);margin-top:1rem;margin-bottom:2.8rem;line-height:1.5}.ligne-deco{width:50px;height:1px;background:var(--sable);margin:0 auto 2rem}.entete-infos{display:flex;gap:2.5rem;justify-content:center;flex-wrap:wrap;font-family:'JetBrains Mono',monospace;font-size:0.85rem;font-weight:400;color:var(--acier);letter-spacing:0.04em}.entete-infos span{display:flex;align-items:center;gap:0.5rem}.p-med{width:4px;height:4px;background:var(--sable);border-radius:50%;display:inline-block;flex-shrink:0}.fleche-scroll{position:absolute;bottom:3rem;left:50%;transform:translateX(-50%);animation:flottement 2.5s ease-in-out infinite;display:flex;flex-direction:column;align-items:center;gap:0.4rem;cursor:pointer;text-decoration:none}.fleche-scroll-texte{font-size:0.68rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--gris);font-weight:500}.fleche-scroll svg{width:28px;height:28px;stroke:var(--accent);fill:none;stroke-width:1.2;opacity:0.7}@keyframes flottement{0%,100%{transform:translateX(-50%) translateY(0)}50%{transform:translateX(-50%) translateY(8px)}}.principal{max-width:1300px;margin:0 auto;padding:0 3rem 6rem}section{margin-bottom:5rem;padding:2.5rem 3rem;border-radius:12px}#profil{background:radial-gradient(ellipse at 50% 50%,rgba(196,185,154,0.1) 0%,transparent 70%)}#experience{background:radial-gradient(ellipse at 50% 50%,rgba(80,80,110,0.04) 0%,transparent 70%)}#formation{background:radial-gradient(ellipse at 50% 50%,rgba(212,201,168,0.08) 0%,transparent 70%)}#competences{background:radial-gradient(ellipse at 50% 50%,rgba(107,91,62,0.06) 0%,transparent 70%)}#outils{background:radial-gradient(ellipse at 50% 50%,rgba(196,185,154,0.08) 0%,transparent 70%)}#engagements{background:radial-gradient(ellipse at 50% 50%,rgba(184,168,200,0.05) 0%,transparent 70%)}.sec-titre{margin-bottom:2.5rem}.sec-titre p{font-family:'Cormorant Garamond',Georgia,serif;line-height:1.3}.sec-num{font-size:1.6rem;font-weight:600;color:var(--accent)}.sec-sep{color:var(--sable);margin:0 0.6rem;font-size:1.4rem}.sec-label{font-size:1.8rem;font-weight:600;color:var(--encre)}.profil-zone{display:grid;grid-template-columns:1fr 280px;gap:2.5rem;align-items:start}.profil-texte{font-size:1rem;color:var(--ardoise);line-height:1.85;text-align:justify;-webkit-hyphens:auto;hyphens:auto;word-spacing:-0.01em}.profil-texte p{margin-bottom:1rem}.profil-texte p:first-child::first-letter{float:left;font-family:'Cormorant Garamond',Georgia,serif;font-size:3.8rem;line-height:0.8;padding-right:0.6rem;padding-top:0.1rem;color:var(--accent);font-weight:600}.confid-bloc{background:var(--fond-2);padding:1.5rem;border-radius:var(--rayon);position:sticky;top:5rem}.confid-bloc .confid-titre{font-size:0.72rem;text-transform:uppercase;letter-spacing:0.12em;color:var(--gris);margin-bottom:0.8rem;font-weight:500}.confid-bloc p{font-size:0.85rem;color:var(--acier);font-style:italic;line-height:1.7}.parcours-zone{display:flex;gap:0;min-height:500px;border-radius:12px;overflow:hidden;border:1px solid var(--trait)}.parcours-liste{width:290px;flex-shrink:0;background:var(--fond-2);border-right:1px solid var(--trait);padding:0;align-self:stretch;overflow-y:auto}.poste-item{padding:1rem 1.2rem;cursor:pointer;border-left:3px solid transparent;transition:all var(--dur-hover) var(--ease)}.poste-item:hover{background:rgba(196,185,154,0.06);border-left-color:var(--sable)}.poste-item .pi-titre{font-size:0.88rem;font-weight:600;color:var(--gris);transition:color var(--dur-hover) var(--ease)}.poste-item .pi-entreprise{font-size:0.75rem;color:var(--gris-doux);margin-top:0.1rem;opacity:0.6;transition:opacity var(--dur-hover) var(--ease)}.poste-item .pi-clic{font-size:0.68rem;color:var(--accent);margin-top:0.4rem;letter-spacing:0.05em;opacity:0;transition:opacity var(--dur-hover) var(--ease)}.poste-item:hover .pi-clic{opacity:1}.poste-item:hover .pi-titre{color:var(--acier)}.poste-item:hover .pi-entreprise{opacity:1}.poste-item .pi-badge{display:inline-block;margin-top:0.3rem;background:var(--fond-2);border:1px solid var(--trait);padding:0.15rem 0.55rem;border-radius:20px;font-family:'JetBrains Mono',monospace;font-size:0.72rem;color:var(--gris)}.poste-item.actif{background:var(--panneau-sombre);border-left-color:var(--panneau-accent);padding:1.5rem 1.2rem;margin-right:-1px}.poste-item.actif .pi-titre{color:var(--panneau-texte);font-size:1rem}.poste-item.actif .pi-entreprise{color:var(--panneau-accent);font-size:0.82rem;opacity:1}.poste-item.actif .pi-clic{display:none}.poste-item.actif .pi-lieu{font-size:0.75rem;color:var(--panneau-gris);margin-top:0.15rem}.poste-item.actif .pi-badge{background:rgba(255,255,255,0.08);border-color:rgba(255,255,255,0.15);color:var(--panneau-texte)}.poste-item.actif .pi-stats{display:flex;gap:1.5rem;margin-top:0.8rem;padding-top:0.8rem;border-top:1px solid var(--panneau-trait)}.poste-item:not(.actif) .pi-stats{display:none}.poste-item:not(.actif) .pi-lieu{display:none}.pi-stat-val{font-family:'JetBrains Mono',monospace;font-size:1.2rem;color:var(--panneau-accent);font-weight:300}.pi-stat-label{font-size:0.68rem;color:var(--panneau-gris)}.parcours-detail{flex:1;padding:2rem 2.5rem;background:var(--fond-carte);transition:opacity 500ms var(--ease),filter 500ms var(--ease),transform 500ms var(--ease)}.pd-surtitre{font-family:'JetBrains Mono',monospace;font-size:0.72rem;color:var(--gris);letter-spacing:0.08em;text-transform:uppercase;margin-bottom:0.4rem}.pd-titre{font-family:'Cormorant Garamond',Georgia,serif;font-size:1.5rem;font-weight:600;color:var(--encre);margin-bottom:0.3rem}.pd-sous-titre{font-size:0.88rem;color:var(--gris);margin-bottom:1.5rem}.onglets-missions{display:flex;gap:0.5rem;margin-bottom:1.5rem;flex-wrap:wrap}.onglet-pill{padding:0.3rem 1rem;border-radius:20px;font-size:0.78rem;cursor:pointer;border:1px solid var(--sable);background:transparent;color:var(--gris);font-family:'Inter',sans-serif;transition:all var(--dur-hover) var(--ease)}.onglet-pill:hover{border-color:var(--accent);color:var(--accent)}.onglet-pill.actif{background:var(--accent);color:var(--fond-carte);border-color:var(--accent)}.onglet-contenu{display:none;opacity:0;transform:translateY(4px);font-size:0.92rem;color:var(--ardoise);line-height:1.85;text-align:justify;-webkit-hyphens:auto;hyphens:auto;transition:opacity 450ms var(--ease),transform 450ms var(--ease)}.onglet-contenu.actif{display:block;opacity:1;transform:translateY(0)}.onglet-contenu p{margin-bottom:1rem}.env-tech{margin-top:1.5rem;padding-top:1rem;border-top:1px solid var(--trait)}.env-tech-label{font-size:0.78rem;font-weight:500;color:var(--acier);margin-bottom:0.5rem}.env-tags{display:flex;flex-wrap:wrap;gap:0.35rem}.env-tag{background:var(--fond-2);padding:0.25rem 0.65rem;border-radius:3px;font-size:0.75rem;color:var(--acier);transition:all var(--dur-hover) var(--ease)}.env-tag:hover{background:var(--accent);color:var(--fond-carte)}.formation-grille{display:grid;grid-template-columns:1fr 1fr;gap:1rem}.formation-item{background:var(--fond-carte);border:1px solid var(--trait);border-radius:var(--rayon);padding:1.2rem 1.4rem;transition:all var(--dur-hover) var(--ease)}.formation-item:hover{transform:translateY(-2px);box-shadow:0 4px 16px var(--ombre-1);border-color:var(--sable)}.formation-master{grid-column:1 / -1;background:var(--fond-2);border:1.5px solid var(--accent);padding:1.5rem 2rem}.formation-master .fi-diplome{font-size:1.3rem;font-weight:700}.formation-master .fi-ecole{font-size:0.88rem}.formation-master .fi-note{font-size:0.8rem;color:#1B5E55}.fi-annee{font-family:'JetBrains Mono',monospace;font-size:0.75rem;color:var(--gris);margin-bottom:0.4rem}.fi-diplome{font-family:'Cormorant Garamond',Georgia,serif;font-size:1.05rem;font-weight:600;color:var(--encre);margin-bottom:0.2rem;line-height:1.3}.fi-ecole{font-size:0.82rem;color:var(--acier)}.fi-note{font-size:0.78rem;color:var(--gris);font-style:italic;margin-top:0.2rem}.comp-legende{display:flex;gap:1rem;margin-bottom:2rem;flex-wrap:wrap;align-items:center}.comp-btn{font-size:0.78rem;color:var(--gris);display:flex;align-items:center;gap:0.4rem;background:none;border:1px solid transparent;cursor:pointer;font-family:'Inter',sans-serif;padding:0.3rem 0.6rem;border-radius:20px;transition:all 400ms var(--ease);opacity:0.7}.comp-btn:hover{background:var(--fond-2);opacity:1}.comp-btn.comp-actif{background:var(--accent);color:var(--fond-1);border-color:var(--accent);opacity:1;font-weight:500}.comp-btn.comp-actif .comp-dot{background:var(--fond-1) !important}.comp-btn-tous{font-size:0.78rem;color:var(--encre);background:none;border:1px solid var(--trait);border-radius:20px;padding:0.3rem 0.8rem;cursor:pointer;font-family:'Inter',sans-serif;transition:all 400ms var(--ease);opacity:0.7}.comp-btn-tous:hover{background:var(--fond-2);opacity:1}.comp-btn-tous.comp-actif{background:var(--accent);color:var(--fond-1);border-color:var(--accent);opacity:1;font-weight:500}.comp-dot{width:10px;height:10px;border-radius:50%;display:inline-block}.comp-flux{display:flex;flex-wrap:wrap;gap:0.7rem 0.4rem;justify-content:space-between}.comp-tag{display:inline-flex;padding:0.3rem 0.8rem;border-radius:20px;font-size:0.78rem;border:1px solid;transition:opacity 450ms var(--ease),transform 450ms var(--ease)}.comp-tag.comp-hidden{opacity:0;transform:scale(0.9);position:absolute;pointer-events:none}.comp-compteur{margin-top:1.5rem;font-size:0.72rem;color:var(--gris-doux);text-align:center}.nuage-zone{display:flex;flex-wrap:wrap;justify-content:center;gap:0.5rem 0.6rem;text-align:center}.outil-tag{display:inline-block;background:var(--fond-2);border-radius:14px;color:var(--acier);transition:all var(--dur-hover) var(--ease)}.outil-tag:hover{background:var(--accent);color:var(--fond-carte);transform:translateY(-2px)}.langue-tag{display:inline-block;background:var(--accent);color:var(--fond-carte);border-radius:14px;padding:0.35rem 1rem;font-size:0.8rem;transition:all var(--dur-hover) var(--ease)}.langue-tag:hover{background:var(--accent-hover)}.eng-mosaique{columns:3;column-gap:1rem}.eng-item{break-inside:avoid;background:var(--fond-2);border-radius:var(--rayon);padding:1.3rem 1.5rem;margin-bottom:1rem;border-bottom:2px solid var(--sable);transition:all var(--dur-hover) var(--ease)}.eng-item:hover{transform:translateY(-2px);box-shadow:0 4px 16px var(--ombre-1)}.eng-item h4{font-family:'Cormorant Garamond',Georgia,serif;font-size:1.05rem;font-weight:600;color:var(--encre);margin-bottom:0.4rem}.eng-item p{font-size:0.85rem;color:var(--gris);line-height:1.65;text-align:justify;-webkit-hyphens:auto;hyphens:auto}.pied{background:var(--accent);color:var(--fond-1);text-align:center;padding:3.5rem 2rem;margin-top:2rem}[data-theme="sombre"] .pied{background:#2a2418;color:var(--encre)}[data-theme="sombre"] .pied .citation{color:var(--encre)}[data-theme="sombre"] .pied .auteur{color:var(--gris)}[data-theme="sombre"] .pied .mention{color:var(--gris-doux)}.pied .citation{font-family:'Cormorant Garamond',Georgia,serif;font-size:1.25rem;font-style:italic;color:#fffefa;margin-bottom:0.5rem;line-height:1.6;max-width:700px;margin-left:auto;margin-right:auto}.pied .auteur{font-size:0.85rem;color:#fffefa;opacity:0.7;margin-bottom:2.5rem}.pied .mention{font-size:0.78rem;color:#fffefa;opacity:0.5;letter-spacing:0.04em}.anim-titre{opacity:0;transition:opacity 600ms var(--ease)}.anim-titre.visible{opacity:1}.anim-bloc{opacity:0;transform:translateY(15px);transition:opacity var(--dur-scroll) var(--ease),transform var(--dur-scroll) var(--ease)}.anim-bloc.visible{opacity:1;transform:translateY(0)}.anim-stagger{opacity:0;transform:translateY(10px);transition:opacity 500ms var(--ease),transform 500ms var(--ease)}.anim-stagger.visible{opacity:1;transform:translateY(0)}.anim-tag{opacity:0;transform:scale(0.95);transition:opacity 400ms var(--ease),transform 400ms var(--ease)}.anim-tag.visible{opacity:1;transform:scale(1)}@media (max-width:900px){.principal{padding:0 1.2rem 4rem}.profil-zone{grid-template-columns:1fr}.parcours-zone{flex-direction:column}.parcours-liste{width:100%;position:static;max-height:none;border-right:none;border-bottom:1px solid var(--trait);display:flex;overflow-x:auto;padding:0}.poste-item{white-space:nowrap;min-width:max-content}.poste-item.actif .pi-stats{display:none}.eng-mosaique{grid-template-columns:1fr 1fr}.formation-grille{grid-template-columns:1fr}.formation-master{grid-column:1}}@media (max-width:600px){.nav-lateral{display:none}.eng-mosaique{columns:1}.entete-infos{flex-direction:column;gap:0.6rem;align-items:center}.principal{padding:0 1rem 3rem}}@media print{.entete,.principal,.nav-lateral,.nav-haut,.btn-imprimer,.toggle-theme,.pied,.print-parcours{display:none !important}.print-cv{display:block !important}.print-cv .pages{display:block !important}.print-cv .label{display:none !important}.print-cv .pages>div{page-break-after:always}.print-cv .pages>div:last-child{page-break-after:auto}.print-cv .a4{width:100% !important;height:100vh !important;display:flex !important;box-shadow:none !important}.print-cv .col-d{height:100% !important;justify-content:flex-start !important}.print-cv .col-l{height:100% !important;justify-content:flex-start !important}.print-cv .col-d{padding:28px 20px !important}.print-cv .col-l{font-size:9pt !important;line-height:1.85 !important;padding:34px 28px !important}.print-cv .sh{font-size:9.5pt !important;margin-bottom:17px !important;margin-top:8px !important}.print-cv .tag-d{font-size:7pt !important;padding:3px 9px !important;margin:2px !important}.print-cv .tag-dev{font-size:7pt !important;padding:3px 9px !important;margin:2px !important}.print-cv .stat{font-size:8pt !important;padding:3px 9px !important}.print-cv .tag{font-size:8pt !important;padding:2.5px 6px !important;margin:3px !important}.print-cv .col-l p[style*="margin-bottom:4px"],.print-cv .col-l p[style*="margin-bottom:5px"]{font-size:7.5pt !important;margin-bottom:5px !important}.print-cv .col-l p[style*="font-size:9pt;font-weight:600;color:#6b5b3e"]{font-size:12pt !important}.print-cv .col-l p[style*="font-size:5.5pt;color:#8e8ea4;margin-top:2px"]{font-size:9pt !important;line-height:1.7 !important}.print-cv .bar-bg{height:5px !important}.print-cv .bar-fill{height:5px !important}.print-cv .exp-block{margin-bottom:18px !important}.print-cv .exp-title{font-size:12pt !important}.print-cv .exp-desc{font-size:8.5pt !important;line-height:1.75 !important}.print-cv .eng-item{margin-bottom:14px !important}.print-cv .eng-title{font-size:9pt !important;font-weight:600 !important}.print-cv .eng-desc{font-size:8.5pt !important;line-height:1.85 !important;color:rgba(236,228,212,0.75) !important}.print-cv .col-d p[style*="font-size:7pt;font-style:italic;color:rgba(236,228,212,0.45)"]{font-size:8.5pt !important;color:rgba(236,228,212,0.6) !important}.print-cv .col-d p[style*="font-size:5pt;color:rgba(236,228,212,0.25)"]{font-size:6.5pt !important;color:rgba(236,228,212,0.45) !important}.print-cv .col-d p[style*="font-size:4.5pt;color:rgba(236,228,212,0.15)"]{font-size:6pt !important;color:rgba(236,228,212,0.35) !important}.print-cv .col-d p[style*="font-size:20pt;font-weight:700"]{font-size:20.5pt !important}.print-cv .col-d p[style*="font-size:8.5pt;font-style:italic;color:#b8956a"]{font-size:11pt !important;font-weight:500 !important}.print-cv .col-d p[style*="line-height:2;"]:not([style*="color:"]){font-size:9pt !important}.print-cv .col-d p[style*="color:rgba(236,228,212,0.65)"]{font-size:9pt !important;color:rgba(236,228,212,0.85) !important}.print-cv .col-d p[style*="font-size:6pt;color:rgba(236,228,212,0.4)"]{font-size:9pt !important;color:rgba(236,228,212,0.7) !important}.print-cv .col-d p[style*="font-size:5pt;color:#b8956a;letter-spacing:0.12em"]{font-size:8pt !important}.print-cv .col-d p[style*="font-size:8pt;font-weight:600;color:#ece4d4"]{font-size:10pt !important}.print-cv .col-d p[style*="font-size:9.5pt;font-weight:700"]{font-size:11.5pt !important}.print-cv .col-d p[style*="font-size:8.5pt;font-weight:600"]{font-size:10.5pt !important}.print-cv .col-d .ph{font-size:8.5pt !important}.print-cv .col-d .ph[style*="color:rgba(236,228,212,0.55)"]{color:rgba(236,228,212,0.7) !important}.print-cv .col-d .ph[style*="color:rgba(236,228,212,0.5)"]{color:rgba(236,228,212,0.7) !important}.print-cv .col-d p[style*="font-size:5.5pt;color:#b8956a;font-style:italic"]{font-size:8pt !important}.print-cv .col-d p[style*="font-size:6pt;color:rgba(236,228,212,0.35)"]{font-size:8pt !important;color:rgba(236,228,212,0.55) !important}.print-cv .col-d p[style*="font-size:7pt;font-weight:500"]{font-size:9pt !important}.print-cv .col-d p[style*="font-size:5.5pt;color:rgba(236,228,212,0.45)"]{font-size:8pt !important;color:rgba(236,228,212,0.65) !important}.print-cv .bar-bg{height:6px !important}.print-cv .bar-fill{height:6px !important}.print-cv .col-d p[style*="font-size:6pt;color:rgba(236,228,212,0.55);line-height:1.8"]{font-size:8.5pt !important;color:rgba(236,228,212,0.7) !important}.print-cv .col-d p[style*="font-size:6pt;color:rgba(236,228,212,0.5);line-height:1.8"]{font-size:8.5pt !important;color:rgba(236,228,212,0.65) !important}.print-cv .col-d span[style*="font-size:5pt;font-weight:500;color:#1a1a2e;background:#b8956a"]{font-size:7pt !important;padding:2.5px 9px !important;text-transform:uppercase !important}.print-cv .col-d p[style*="rgba(236,228,212,0.5)"]{color:rgba(236,228,212,0.7) !important}.print-cv .col-d p[style*="rgba(236,228,212,0.55)"]{color:rgba(236,228,212,0.7) !important}.print-cv .col-d p[style*="rgba(236,228,212,0.45)"]{color:rgba(236,228,212,0.65) !important}.print-cv .col-d p[style*="rgba(236,228,212,0.4)"]{color:rgba(236,228,212,0.6) !important}.print-cv .col-d p[style*="rgba(236,228,212,0.3)"]{color:rgba(236,228,212,0.5) !important}.print-cv .col-l span[style*="border-radius:8px"]{font-size:7.5pt !important;padding:3px 9px !important}.print-cv .col-l p[style*="font-size:11pt"],.print-cv .col-l p[style*="font-size:12.5pt"],.print-cv .col-l p[style*="font-size:10.5pt"]{font-size:13pt !important}.print-cv .col-l p[style*="color:#b8956a;font-weight:500"]{font-size:10pt !important}*{transition:none !important;animation:none !important}@page{size:A4;margin:0}html{font-size:11pt}body{background:#fff !important;color:#1a1a2e;line-height:1.5}}.print-parcours{display:none}.print-cv{display:none}.print-cv .pages{display:flex;gap:0;flex-wrap:wrap;justify-content:center}.print-cv .a4{width:100%;background:#fff;display:flex;page-break-after:always}.print-cv .col-d{width:38%;background:#1a1a2e;padding:32px 22px;display:flex;flex-direction:column;color:#ece4d4;font-size:6.5pt;line-height:1.7;-webkit-print-color-adjust:exact;print-color-adjust:exact}.print-cv .col-l{width:62%;background:#fff;padding:28px 22px;display:flex;flex-direction:column;font-size:7pt;color:#2f2f48;line-height:1.7}.print-cv .sh{font-size:6pt;font-weight:600;color:#b8956a;letter-spacing:0.15em;text-transform:uppercase;margin-bottom:8px}.print-cv .tag-d{font-size:5.5pt;color:rgba(236,228,212,0.75);background:rgba(255,255,255,0.07);padding:2.5px 7px;border-radius:3px;display:inline-block;margin:1.5px;-webkit-print-color-adjust:exact;print-color-adjust:exact}.print-cv .tag-dev{font-size:5.5pt;color:#b8956a;background:rgba(184,149,106,0.12);border:0.5px solid rgba(184,149,106,0.25);padding:2.5px 7px;border-radius:3px;display:inline-block;margin:1.5px;-webkit-print-color-adjust:exact;print-color-adjust:exact}.print-cv .stat{font-family:'JetBrains Mono',monospace;font-size:6.5pt;color:#b8956a;background:rgba(184,149,106,0.08);padding:2px 7px;border-radius:3px;display:inline-block;margin:1px;-webkit-print-color-adjust:exact;print-color-adjust:exact}.print-cv .bar-bg{width:100%;height:3px;background:rgba(255,255,255,0.06);border-radius:2px;-webkit-print-color-adjust:exact;print-color-adjust:exact}.print-cv .bar-fill{height:3px;background:linear-gradient(90deg,#b8956a,#d4b08c);border-radius:2px;-webkit-print-color-adjust:exact;print-color-adjust:exact}.print-cv .exp-block{margin-bottom:16px}.print-cv .exp-title{font-family:'Cormorant Garamond',serif;font-size:10.5pt;font-weight:700;color:#1a1a2e}.print-cv .label{display:none}.print-cv .tag{display:inline-block;font-size:5.5pt;padding:2px 6px;border-radius:3px;margin:1.5px;-webkit-print-color-adjust:exact;print-color-adjust:exact}*:focus-visible{outline:2px solid var(--accent);outline-offset:2px}body,body *{-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;-webkit-touch-callout:none}</style>
+</head>
+<body>
+
+<!-- Navigation supérieure -->
+<nav class="nav-haut" id="navHaut">
+  <span class="nav-haut-nom">Dine A.</span>
+  <ul class="nav-haut-liens">
+    <li><a href="#profil">Profil</a></li>
+    <li><a href="#experience">Parcours</a></li>
+    <li><a href="#formation">Formation</a></li>
+    <li><a href="#competences">Expertise</a></li>
+    <li><a href="#outils">Outils</a></li>
+    <li><a href="#engagements">Engagements</a></li>
+  </ul>
+</nav>
+
+<!-- Navigation latérale -->
+<nav class="nav-lateral" id="navLateral">
+  <a href="#accueil" data-label="Accueil" class="active"></a>
+  <a href="#profil" data-label="Profil"></a>
+  <a href="#experience" data-label="Parcours"></a>
+  <a href="#formation" data-label="Formation"></a>
+  <a href="#competences" data-label="Expertise"></a>
+  <a href="#outils" data-label="Outils"></a>
+  <a href="#engagements" data-label="Engagements"></a>
+</nav>
+
+<!-- Toggle thème -->
+<button class="toggle-theme" id="toggleTheme" title="Basculer le thème">
+  <svg class="icone-soleil" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+  <svg class="icone-lune" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
+</button>
+
+<!-- Bouton imprimer -->
+<button class="btn-imprimer" onclick="window.print()" title="Imprimer ou exporter en PDF">
+  <svg viewBox="0 0 24 24"><path d="M6 9V2h12v7M6 18H4a2 2 0 01-2-2v-5a2 2 0 012-2h16a2 2 0 012 2v5a2 2 0 01-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
+</button>
+
+<!-- ═══════════ EN-TÊTE ═══════════ -->
+<header class="entete" id="accueil">
+  <div class="entete-contenu">
+    <p class="surtitre">Curriculum Vit&aelig;</p>
+    <h1 id="nomAnime"></h1>
+    <p class="titre-fonction">Consultant senior en finance, audit<br>et accompagnement académique</p>
+    <div class="ligne-deco"></div>
+    <div class="entete-infos">
+      <span class="info-stagger" style="opacity: 0; transform: translateX(-20px) scale(0.95); filter: blur(4px); transition: opacity 700ms cubic-bezier(0.16,1,0.3,1), transform 700ms cubic-bezier(0.16,1,0.3,1), filter 700ms ease-out;"><span class="p-med"></span> Cotonou, Bénin</span>
+      <span class="info-stagger" style="opacity: 0; transform: translateY(12px) scale(0.95); filter: blur(4px); transition: opacity 700ms cubic-bezier(0.16,1,0.3,1), transform 700ms cubic-bezier(0.16,1,0.3,1), filter 700ms ease-out;"><span class="p-med"></span> haldalhia.invest@gmail.com</span>
+      <span class="info-stagger" style="opacity: 0; transform: translateX(20px) scale(0.95); filter: blur(4px); transition: opacity 700ms cubic-bezier(0.16,1,0.3,1), transform 700ms cubic-bezier(0.16,1,0.3,1), filter 700ms ease-out;"><span class="p-med"></span> Clientèle internationale</span>
+      <span class="info-stagger" style="opacity: 0; transform: translateY(-12px) scale(0.95); filter: blur(4px); transition: opacity 700ms cubic-bezier(0.16,1,0.3,1), transform 700ms cubic-bezier(0.16,1,0.3,1), filter 700ms ease-out;"><span class="p-med"></span> cv-dine.netlify.app</span>
+    </div>
+  </div>
+  <a href="#profil" class="fleche-scroll">
+    <span class="fleche-scroll-texte">Découvrir</span>
+    <svg viewBox="0 0 24 24"><path d="M7 10l5 5 5-5"/></svg>
+  </a>
+</header>
+
+<!-- ═══════════ CONTENU PRINCIPAL ═══════════ -->
+<main class="principal">
+
+  <!-- ═══════ PROFIL (occupe 2 premières colonnes de la grille) ═══════ -->
+  <section id="profil">
+    <div class="sec-titre anim-titre">
+      <p><span class="sec-num">01</span><span class="sec-sep">·</span><span class="sec-label">Profil</span></p>
+    </div>
+    <div class="profil-zone anim-bloc">
+      <div class="profil-texte">
+        <p>Master CCA de l'IAE d'Amiens en poche, avec une équivalence couvrant 18 des 20 unités de valeur du diplôme d'expertise comptable ; plus de quinze ans à naviguer entre la gestion financière, l'audit et le conseil stratégique. France d'abord, puis le Maroc, puis l'Afrique de l'Ouest, avec un même fil conducteur durant tout mon parcours : comprendre les chiffres pour éclairer les décisions.</p>
+        <p>Mon parcours m'a conduit à intervenir dans des environnements très diversifiés : cabinets d'expertise comptable, entreprises du secteur technologique, structures associatives et fédératives, ou encore PME industrielles et de services. Cette polyvalence, associée à une rigueur méthodologique forgée en cabinet, constitue aujourd'hui le socle de mon activité de consultant indépendant à vocation internationale.</p>
+        <p>Parallèlement à mes missions de conseil financier, j'interviens depuis plusieurs années dans l'accompagnement académique de haut niveau, aussi bien pour l'encadrement méthodologique de mémoires de fin d'études et de thèses professionnelles, que pour l'enseignement vacataire en écoles de commerce ou universités. Cette double expertise, à la croisée de la pratique professionnelle et de la réflexion académique, me permet d'apporter à chaque projet/mission une valeur ajoutée singulière.</p>
+      </div>
+      <div class="confid-bloc">
+        <p class="confid-titre">Confidentialité</p>
+        <p>Par engagement de confidentialité envers mes clients et partenaires, certaines missions sont décrites sans mention nominative des structures bénéficiaires. Cette discrétion constitue un principe fondamental de ma pratique professionnelle et garantit à chaque client que les informations relatives à sa structure, à ses données financières et à la nature des travaux réalisés ne seront jamais divulguées, quels que soient le contexte ou l'interlocuteur.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════ PARCOURS PROFESSIONNEL (casse la grille, pleine largeur) ═══════ -->
+  <section id="experience">
+    <div class="sec-titre anim-titre">
+      <p><span class="sec-num">02</span><span class="sec-sep">·</span><span class="sec-label">Parcours professionnel</span></p>
+    </div>
+
+    <div class="parcours-zone anim-bloc">
+      <!-- Liste des postes (colonne gauche) -->
+      <div class="parcours-liste" id="parcListe">
+        <!-- Poste 1 : ACF -->
+        <div class="poste-item actif" data-poste="0" onmouseenter="changerPoste(0)" role="tab" aria-selected="true" tabindex="0">
+          <p class="pi-titre">Directeur associé</p>
+          <p class="pi-entreprise">ACF Consulting</p>
+          <p class="pi-lieu">Cotonou, Bénin</p>
+          <span class="pi-badge">2023 · auj.</span>
+          <p class="pi-clic">Explorer &rsaquo;</p>
+          <div class="pi-stats">
+            <div><p class="pi-stat-val">40+</p><p class="pi-stat-label">clients</p></div>
+            <div><p class="pi-stat-val">9</p><p class="pi-stat-label">pays</p></div>
+            <div><p class="pi-stat-val">92%</p><p class="pi-stat-label">fidélis.</p></div>
+            <div><p class="pi-stat-val">20+</p><p class="pi-stat-label">mémoires</p></div>
+          </div>
+        </div>
+        <!-- Poste 2 : Consultant -->
+        <div class="poste-item" data-poste="1" onmouseenter="changerPoste(1)" role="tab" aria-selected="false" tabindex="0">
+          <p class="pi-titre">Consultant senior</p>
+          <p class="pi-entreprise">Indépendant</p>
+          <p class="pi-lieu">Rabat, Maroc</p>
+          <span class="pi-badge">2019 · 2023</span>
+          <p class="pi-clic">Explorer &rsaquo;</p>
+          <div class="pi-stats">
+            <div><p class="pi-stat-val">20+</p><p class="pi-stat-label">audits</p></div>
+            <div><p class="pi-stat-val">5,8M</p><p class="pi-stat-label">EUR</p></div>
+            <div><p class="pi-stat-val">40+</p><p class="pi-stat-label">mémoires</p></div>
+            <div><p class="pi-stat-val">8</p><p class="pi-stat-label">thèses</p></div>
+          </div>
+        </div>
+        <!-- Poste 3 : CGA -->
+        <div class="poste-item" data-poste="2" onmouseenter="changerPoste(2)" role="tab" aria-selected="false" tabindex="0">
+          <p class="pi-titre">Resp. comptable et fiscal</p>
+          <p class="pi-entreprise">CGA Conseil</p>
+          <p class="pi-lieu">Rabat, Maroc</p>
+          <span class="pi-badge">2017 · 2018</span>
+          <p class="pi-clic">Explorer &rsaquo;</p>
+          <div class="pi-stats">
+            <div><p class="pi-stat-val">40+</p><p class="pi-stat-label">dossiers</p></div>
+            <div><p class="pi-stat-val">120K</p><p class="pi-stat-label">EUR écon.</p></div>
+          </div>
+        </div>
+        <!-- Poste 4 : CNA -->
+        <div class="poste-item" data-poste="3" onmouseenter="changerPoste(3)" role="tab" aria-selected="false" tabindex="0">
+          <p class="pi-titre">Resp. comptable et financier</p>
+          <p class="pi-entreprise">CNA</p>
+          <p class="pi-lieu">Pessac, France</p>
+          <span class="pi-badge">2013 · 2016</span>
+          <p class="pi-clic">Explorer &rsaquo;</p>
+          <div class="pi-stats">
+            <div><p class="pi-stat-val">28</p><p class="pi-stat-label">salariés</p></div>
+            <div><p class="pi-stat-val">-38%</p><p class="pi-stat-label">délai paie.</p></div>
+          </div>
+        </div>
+        <!-- Poste 5 : FMG -->
+        <div class="poste-item" data-poste="4" onmouseenter="changerPoste(4)" role="tab" aria-selected="false" tabindex="0">
+          <p class="pi-titre">Resp. admin. et financier</p>
+          <p class="pi-entreprise">FMG</p>
+          <p class="pi-lieu">Bordeaux, France</p>
+          <span class="pi-badge">2010 · 2013</span>
+          <p class="pi-clic">Explorer &rsaquo;</p>
+          <div class="pi-stats">
+            <div><p class="pi-stat-val">7</p><p class="pi-stat-label">établiss.</p></div>
+            <div><p class="pi-stat-val">1.8M</p><p class="pi-stat-label">EUR fin.</p></div>
+          </div>
+        </div>
+        <!-- Poste 6 : BBA -->
+        <div class="poste-item" data-poste="5" onmouseenter="changerPoste(5)" role="tab" aria-selected="false" tabindex="0">
+          <p class="pi-titre">Collaborateur comptable</p>
+          <p class="pi-entreprise">BBA Expertise</p>
+          <p class="pi-lieu">Amiens, France</p>
+          <span class="pi-badge">2009 · 2010</span>
+          <p class="pi-clic">Explorer &rsaquo;</p>
+          <div class="pi-stats">
+            <div><p class="pi-stat-val">18</p><p class="pi-stat-label">enseignes</p></div>
+            <div><p class="pi-stat-val">-30%</p><p class="pi-stat-label">temps rév.</p></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Panneau de détail (colonne droite) -->
+      <div class="parcours-detail" id="parcDetail" role="tabpanel">
+        <!-- Le contenu sera injecté par JavaScript -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════ FORMATION (G5 Grille) ═══════ -->
+  <section id="formation">
+    <div class="sec-titre anim-titre">
+      <p><span class="sec-num">03</span><span class="sec-sep">·</span><span class="sec-label">Formation</span></p>
+    </div>
+    <div class="formation-grille anim-bloc">
+      <div class="formation-item formation-master">
+        <div style="display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap;">
+          <p class="fi-diplome">Master Comptabilité-Contrôle-Audit</p>
+          <p class="fi-annee">2007 · 2008</p>
+        </div>
+        <p class="fi-ecole">IAE d'Amiens, France</p>
+        <p class="fi-note">Équivalence au diplôme d'expertise comptable : 18 unités de valeur obtenues sur 20</p>
+        <div style="margin-top: 10px; display: flex; align-items: center; gap: 10px;">
+          <span style="display: inline-flex; align-items: center; gap: 5px; background: var(--accent); color: #fff; font-size: 0.6rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; padding: 4px 12px; border-radius: 20px; white-space: nowrap;">&#x1F4D6; Mémoire</span>
+          <span style="font-family: 'Cormorant Garamond', serif; font-size: 0.95rem; color: var(--ardoise); font-style: italic;">Optimisation des régimes de retraites surcomplémentaires</span>
+        </div>
+      </div>
+      <div class="formation-item">
+        <p class="fi-annee">2006 · 2007</p>
+        <p class="fi-diplome">MSTCF</p>
+        <p class="fi-ecole">IAE d'Amiens, France</p>
+      </div>
+      <div class="formation-item">
+        <p class="fi-annee">2005 · 2006</p>
+        <p class="fi-diplome">Licence Économie et Gestion</p>
+        <p class="fi-ecole">IAE d'Amiens, France</p>
+      </div>
+      <div class="formation-item">
+        <p class="fi-annee">2003 · 2005</p>
+        <p class="fi-diplome">DUT GEA</p>
+        <p class="fi-ecole">IUT de l'Oise, France</p>
+        <p class="fi-note">Option Finances-Comptabilité</p>
+      </div>
+      <div class="formation-item">
+        <p class="fi-annee">2002 · 2003</p>
+        <p class="fi-diplome">Baccalauréat G2</p>
+        <p class="fi-ecole">Cotonou, Bénin</p>
+        <p class="fi-note">Techniques quantitatives de gestion</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════ COMPÉTENCES (pleine largeur) ═══════ -->
+  <section id="competences">
+    <div class="sec-titre anim-titre">
+      <p><span class="sec-num">04</span><span class="sec-sep">·</span><span class="sec-label">Domaines d'expertise</span></p>
+    </div>
+    <div class="anim-bloc">
+      <div class="comp-legende">
+        <button class="comp-btn-tous" onclick="filtrerComp('tous')">Tous</button>
+        <button class="comp-btn" onclick="filtrerComp('fin')"><span class="comp-dot" style="background: var(--comp-fin-bord);"></span>Finance et audit</button>
+        <button class="comp-btn" onclick="filtrerComp('aca')"><span class="comp-dot" style="background: var(--comp-aca-bord);"></span>Académique</button>
+        <button class="comp-btn" onclick="filtrerComp('mgt')"><span class="comp-dot" style="background: var(--comp-mgt-bord);"></span>Management</button>
+        <button class="comp-btn" onclick="filtrerComp('tra')"><span class="comp-dot" style="background: var(--comp-tra-bord);"></span>Transversal</button>
+      </div>
+      <div class="comp-flux" id="compFlux">
+        <!-- Finance -->
+        <span class="comp-tag fin" style="background: var(--comp-fin-bg); border-color: var(--comp-fin-bord); color: var(--ardoise);">Comptabilité générale et approfondie</span>
+        <span class="comp-tag aca" style="background: var(--comp-aca-bg); border-color: var(--comp-aca-bord); color: var(--ardoise);">Méthodologie de recherche qualitative et quantitative</span>
+        <span class="comp-tag fin" style="background: var(--comp-fin-bg); border-color: var(--comp-fin-bord); color: var(--ardoise);">Normes IFRS, CGNC et SYSCOHADA</span>
+        <span class="comp-tag mgt" style="background: var(--comp-mgt-bg); border-color: var(--comp-mgt-bord); color: var(--ardoise);">Management d'équipe et gestion de projet</span>
+        <span class="comp-tag fin" style="background: var(--comp-fin-bg); border-color: var(--comp-fin-bord); color: var(--ardoise);">Consolidation des comptes</span>
+        <span class="comp-tag tra" style="background: var(--comp-tra-bg); border-color: var(--comp-tra-bord); color: var(--ardoise);">Droit des affaires et des sociétés</span>
+        <span class="comp-tag fin" style="background: var(--comp-fin-bg); border-color: var(--comp-fin-bord); color: var(--ardoise);">Audit financier, légal et contractuel</span>
+        <span class="comp-tag aca" style="background: var(--comp-aca-bg); border-color: var(--comp-aca-bord); color: var(--ardoise);">Encadrement de mémoires et de thèses</span>
+        <span class="comp-tag fin" style="background: var(--comp-fin-bg); border-color: var(--comp-fin-bord); color: var(--ardoise);">Contrôle de gestion et comptabilité analytique</span>
+        <span class="comp-tag mgt" style="background: var(--comp-mgt-bg); border-color: var(--comp-mgt-bord); color: var(--ardoise);">Conduite du changement organisationnel</span>
+        <span class="comp-tag fin" style="background: var(--comp-fin-bg); border-color: var(--comp-fin-bord); color: var(--ardoise);">Contrôle interne et gestion des risques</span>
+        <span class="comp-tag tra" style="background: var(--comp-tra-bg); border-color: var(--comp-tra-bord); color: var(--ardoise);">Droit du travail et relations sociales</span>
+        <span class="comp-tag fin" style="background: var(--comp-fin-bg); border-color: var(--comp-fin-bord); color: var(--ardoise);">Due diligence financière et fiscale</span>
+        <span class="comp-tag aca" style="background: var(--comp-aca-bg); border-color: var(--comp-aca-bord); color: var(--ardoise);">Normes de rédaction académique APA, Harvard et Vancouver</span>
+        <span class="comp-tag fin" style="background: var(--comp-fin-bg); border-color: var(--comp-fin-bord); color: var(--ardoise);">Fiscalité des entreprises</span>
+        <span class="comp-tag mgt" style="background: var(--comp-mgt-bg); border-color: var(--comp-mgt-bord); color: var(--ardoise);">Gestion des ressources humaines</span>
+        <span class="comp-tag fin" style="background: var(--comp-fin-bg); border-color: var(--comp-fin-bord); color: var(--ardoise);">Fiscalité internationale et conventions bilatérales</span>
+        <span class="comp-tag aca" style="background: var(--comp-aca-bg); border-color: var(--comp-aca-bord); color: var(--ardoise);">Revue de littérature et cadre conceptuel</span>
+        <span class="comp-tag tra" style="background: var(--comp-tra-bg); border-color: var(--comp-tra-bord); color: var(--ardoise);">Droit fiscal et contentieux</span>
+        <span class="comp-tag fin" style="background: var(--comp-fin-bg); border-color: var(--comp-fin-bord); color: var(--ardoise);">Gestion de trésorerie et relations bancaires</span>
+        <span class="comp-tag mgt" style="background: var(--comp-mgt-bg); border-color: var(--comp-mgt-bord); color: var(--ardoise);">Formation professionnelle et montée en compétences</span>
+        <span class="comp-tag fin" style="background: var(--comp-fin-bg); border-color: var(--comp-fin-bord); color: var(--ardoise);">Analyse financière et diagnostic stratégique</span>
+        <span class="comp-tag aca" style="background: var(--comp-aca-bg); border-color: var(--comp-aca-bord); color: var(--ardoise);">Traitement et analyse statistique des données</span>
+        <span class="comp-tag tra" style="background: var(--comp-tra-bg); border-color: var(--comp-tra-bord); color: var(--ardoise);">Marketing et stratégie commerciale</span>
+        <span class="comp-tag fin" style="background: var(--comp-fin-bg); border-color: var(--comp-fin-bord); color: var(--ardoise);">Business plans et prévisionnels financiers</span>
+        <span class="comp-tag mgt" style="background: var(--comp-mgt-bg); border-color: var(--comp-mgt-bord); color: var(--ardoise);">Accompagnement à la création d'entreprise</span>
+        <span class="comp-tag fin" style="background: var(--comp-fin-bg); border-color: var(--comp-fin-bord); color: var(--ardoise);">Restructuration financière et plans de redressement</span>
+        <span class="comp-tag aca" style="background: var(--comp-aca-bg); border-color: var(--comp-aca-bord); color: var(--ardoise);">Relecture critique et correction approfondie</span>
+        <span class="comp-tag tra" style="background: var(--comp-tra-bg); border-color: var(--comp-tra-bord); color: var(--ardoise);">Économie générale et internationale</span>
+        <span class="comp-tag fin" style="background: var(--comp-fin-bg); border-color: var(--comp-fin-bord); color: var(--ardoise);">Reporting financier et tableaux de bord</span>
+        <span class="comp-tag mgt" style="background: var(--comp-mgt-bg); border-color: var(--comp-mgt-bord); color: var(--ardoise);">Stratégie d'entreprise et développement</span>
+        <span class="comp-tag fin" style="background: var(--comp-fin-bg); border-color: var(--comp-fin-bord); color: var(--ardoise);">Optimisation fiscale internationale</span>
+        <span class="comp-tag aca" style="background: var(--comp-aca-bg); border-color: var(--comp-aca-bord); color: var(--ardoise);">Conception de supports pédagogiques</span>
+        <span class="comp-tag tra" style="background: var(--comp-tra-bg); border-color: var(--comp-tra-bord); color: var(--ardoise);">Gestion et management des établissements de santé</span>
+        <span class="comp-tag fin" style="background: var(--comp-fin-bg); border-color: var(--comp-fin-bord); color: var(--ardoise);">Montage de dossiers de financement</span>
+        <span class="comp-tag mgt" style="background: var(--comp-mgt-bg); border-color: var(--comp-mgt-bord); color: var(--ardoise);">RSE et gouvernance d'entreprise</span>
+        <span class="comp-tag aca" style="background: var(--comp-aca-bg); border-color: var(--comp-aca-bord); color: var(--ardoise);">Enseignement supérieur en vacations</span>
+        <span class="comp-tag fin" style="background: var(--comp-fin-bg); border-color: var(--comp-fin-bord); color: var(--ardoise);">Accompagnement des contrôles fiscaux</span>
+        <span class="comp-tag tra" style="background: var(--comp-tra-bg); border-color: var(--comp-tra-bord); color: var(--ardoise);">Rédaction de rapports d'expertise</span>
+        <span class="comp-tag fin" style="background: var(--comp-fin-bg); border-color: var(--comp-fin-bord); color: var(--ardoise);">Conversion aux normes IFRS</span>
+        <span class="comp-tag aca" style="background: var(--comp-aca-bg); border-color: var(--comp-aca-bord); color: var(--ardoise);">Accompagnement de la problématisation à la soutenance</span>
+        <span class="comp-tag mgt" style="background: var(--comp-mgt-bg); border-color: var(--comp-mgt-bord); color: var(--ardoise);">Pilotage stratégique et opérationnel</span>
+        <span class="comp-tag tra" style="background: var(--comp-tra-bg); border-color: var(--comp-tra-bord); color: var(--ardoise);">Droit immobilier</span>
+        <span class="comp-tag fin" style="background: var(--comp-fin-bg); border-color: var(--comp-fin-bord); color: var(--ardoise);">Mise en conformité OHADA et SYSCOHADA</span>
+        <span class="comp-tag aca" style="background: var(--comp-aca-bg); border-color: var(--comp-aca-bord); color: var(--ardoise);">Modélisations économétriques et études de cas</span>
+        <span class="comp-tag mgt" style="background: var(--comp-mgt-bg); border-color: var(--comp-mgt-bord); color: var(--ardoise);">Coordination de réseaux de consultants</span>
+        <span class="comp-tag tra" style="background: var(--comp-tra-bg); border-color: var(--comp-tra-bord); color: var(--ardoise);">Droit bancaire et des assurances</span>
+        <span class="comp-tag fin" style="background: var(--comp-fin-bg); border-color: var(--comp-fin-bord); color: var(--ardoise);">Négociation des conditions bancaires</span>
+        <span class="comp-tag aca" style="background: var(--comp-aca-bg); border-color: var(--comp-aca-bord); color: var(--ardoise);">Veille scientifique et méthodologique</span>
+        <span class="comp-tag mgt" style="background: var(--comp-mgt-bg); border-color: var(--comp-mgt-bord); color: var(--ardoise);">Gestion prévisionnelle des emplois et compétences</span>
+        <span class="comp-tag tra" style="background: var(--comp-tra-bg); border-color: var(--comp-tra-bord); color: var(--ardoise);">Politique économique et développement local</span>
+        <span class="comp-tag fin" style="background: var(--comp-fin-bg); border-color: var(--comp-fin-bord); color: var(--ardoise);">Gestion de la paie et obligations sociales</span>
+        <span class="comp-tag mgt" style="background: var(--comp-mgt-bg); border-color: var(--comp-mgt-bord); color: var(--ardoise);">Encadrement et formation d'équipes</span>
+        <span class="comp-tag tra" style="background: var(--comp-tra-bg); border-color: var(--comp-tra-bord); color: var(--ardoise);">Intégration régionale et espace OHADA</span>
+        <span class="comp-tag tra" style="background: var(--comp-tra-bg); border-color: var(--comp-tra-bord); color: var(--ardoise);">Droit de la sécurité sociale</span>
+      </div>
+      <p class="comp-compteur" id="compCompteur"></p>
+    </div>
+  </section>
+
+  <!-- ═══════ OUTILS ET LANGUES (2 premières colonnes) ═══════ -->
+  <section id="outils">
+    <div class="sec-titre anim-titre">
+      <p><span class="sec-num">05</span><span class="sec-sep">·</span><span class="sec-label">Outils et langues</span></p>
+    </div>
+    <div class="anim-bloc">
+      <!-- Matrice par domaine -->
+      <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1.5rem;">
+        <!-- Colonne 1 : Comptabilité -->
+        <div>
+          <p style="font-size: 0.72rem; font-weight: 600; color: var(--acier); margin-bottom: 0.6rem; text-transform: uppercase; letter-spacing: 0.08em;">Comptabilité</p>
+          <div style="display: flex; flex-wrap: wrap; gap: 0.35rem;">
+            <span class="outil-tag" style="padding: 0.25rem 0.7rem; font-size: 0.78rem;">SAGE Comptabilité</span>
+            <span class="outil-tag" style="padding: 0.25rem 0.7rem; font-size: 0.74rem;">SAGE Coala</span>
+            <span class="outil-tag" style="padding: 0.25rem 0.7rem; font-size: 0.74rem;">SAGE Paie</span>
+            <span class="outil-tag" style="padding: 0.25rem 0.7rem; font-size: 0.74rem;">EBP Compta Pro</span>
+            <span class="outil-tag" style="padding: 0.25rem 0.7rem; font-size: 0.72rem;">Ciel Compta</span>
+            <span class="outil-tag" style="padding: 0.25rem 0.7rem; font-size: 0.74rem;">QuickBooks</span>
+          </div>
+        </div>
+        <!-- Colonne 2 : Analyse et pilotage -->
+        <div>
+          <p style="font-size: 0.72rem; font-weight: 600; color: var(--acier); margin-bottom: 0.6rem; text-transform: uppercase; letter-spacing: 0.08em;">Analyse et pilotage</p>
+          <div style="display: flex; flex-wrap: wrap; gap: 0.35rem;">
+            <span class="outil-tag" style="padding: 0.25rem 0.7rem; font-size: 0.82rem;">Excel avancé</span>
+            <span class="outil-tag" style="padding: 0.25rem 0.7rem; font-size: 0.78rem;">VBA et Macros</span>
+            <span class="outil-tag" style="padding: 0.25rem 0.7rem; font-size: 0.76rem;">Power Query</span>
+            <span class="outil-tag" style="padding: 0.25rem 0.7rem; font-size: 0.82rem;">Power BI</span>
+            <span class="outil-tag" style="padding: 0.25rem 0.7rem; font-size: 0.74rem;">SPSS</span>
+          </div>
+        </div>
+        <!-- Colonne 3 : Productivité -->
+        <div>
+          <p style="font-size: 0.72rem; font-weight: 600; color: var(--acier); margin-bottom: 0.6rem; text-transform: uppercase; letter-spacing: 0.08em;">Productivité</p>
+          <div style="display: flex; flex-wrap: wrap; gap: 0.35rem;">
+            <span class="outil-tag" style="padding: 0.25rem 0.7rem; font-size: 0.76rem;">Pack Office</span>
+            <span class="outil-tag" style="padding: 0.25rem 0.7rem; font-size: 0.74rem;">Word</span>
+            <span class="outil-tag" style="padding: 0.25rem 0.7rem; font-size: 0.78rem;">Google Workspace</span>
+            <span class="outil-tag" style="padding: 0.25rem 0.7rem; font-size: 0.72rem;">Notion</span>
+            <span class="outil-tag" style="padding: 0.25rem 0.7rem; font-size: 0.72rem;">Zotero</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Développement et technologies · AUTODIDACTE -->
+      <div style="margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid var(--trait);">
+        <p style="font-size: 0.78rem; font-weight: 600; color: var(--acier); margin-bottom: 0.8rem; display: flex; align-items: center; gap: 0.6rem; text-transform: uppercase; letter-spacing: 0.08em;">
+          Développement et technologies
+          <span style="font-size: 0.62rem; font-weight: 500; color: #006D80; background: transparent; padding: 0.18rem 0.65rem; border-radius: 20px; border: 1px solid #006D80; letter-spacing: 0.08em; text-transform: uppercase;">autodidacte</span>
+        </p>
+        <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1.5rem;">
+          <!-- Frontend -->
+          <div>
+            <p style="font-size: 0.78rem; font-weight: 500; color: var(--acier); margin-bottom: 0.5rem;">Frontend</p>
+            <div style="display: flex; flex-wrap: wrap; gap: 0.3rem;">
+              <span class="outil-tag" style="padding: 0.22rem 0.6rem; font-size: 0.74rem; background: rgba(107,91,62,0.08); border: 1px solid rgba(107,91,62,0.15);">HTML5</span>
+              <span class="outil-tag" style="padding: 0.22rem 0.6rem; font-size: 0.74rem; background: rgba(107,91,62,0.08); border: 1px solid rgba(107,91,62,0.15);">CSS3</span>
+              <span class="outil-tag" style="padding: 0.22rem 0.6rem; font-size: 0.76rem; background: rgba(107,91,62,0.08); border: 1px solid rgba(107,91,62,0.15);">JavaScript ES6+</span>
+              <span class="outil-tag" style="padding: 0.22rem 0.6rem; font-size: 0.72rem; background: rgba(107,91,62,0.08); border: 1px solid rgba(107,91,62,0.15);">React</span>
+              <span class="outil-tag" style="padding: 0.22rem 0.6rem; font-size: 0.72rem; background: rgba(107,91,62,0.08); border: 1px solid rgba(107,91,62,0.15);">Vue.js</span>
+              <span class="outil-tag" style="padding: 0.22rem 0.6rem; font-size: 0.72rem; background: rgba(107,91,62,0.08); border: 1px solid rgba(107,91,62,0.15);">Bootstrap</span>
+              <span class="outil-tag" style="padding: 0.22rem 0.6rem; font-size: 0.72rem; background: rgba(107,91,62,0.08); border: 1px solid rgba(107,91,62,0.15);">Tailwind CSS</span>
+            </div>
+          </div>
+          <!-- Backend et données -->
+          <div>
+            <p style="font-size: 0.78rem; font-weight: 500; color: var(--acier); margin-bottom: 0.5rem;">Backend et données</p>
+            <div style="display: flex; flex-wrap: wrap; gap: 0.3rem;">
+              <span class="outil-tag" style="padding: 0.22rem 0.6rem; font-size: 0.76rem; background: rgba(107,91,62,0.08); border: 1px solid rgba(107,91,62,0.15);">Python</span>
+              <span class="outil-tag" style="padding: 0.22rem 0.6rem; font-size: 0.72rem; background: rgba(107,91,62,0.08); border: 1px solid rgba(107,91,62,0.15);">SQL</span>
+              <span class="outil-tag" style="padding: 0.22rem 0.6rem; font-size: 0.72rem; background: rgba(107,91,62,0.08); border: 1px solid rgba(107,91,62,0.15);">PHP</span>
+              <span class="outil-tag" style="padding: 0.22rem 0.6rem; font-size: 0.72rem; background: rgba(107,91,62,0.08); border: 1px solid rgba(107,91,62,0.15);">Node.js</span>
+              <span class="outil-tag" style="padding: 0.22rem 0.6rem; font-size: 0.72rem; background: rgba(107,91,62,0.08); border: 1px solid rgba(107,91,62,0.15);">Bash / Shell</span>
+              <span class="outil-tag" style="padding: 0.22rem 0.6rem; font-size: 0.72rem; background: rgba(107,91,62,0.08); border: 1px solid rgba(107,91,62,0.15);">API REST</span>
+            </div>
+          </div>
+          <!-- DevOps et outils -->
+          <div>
+            <p style="font-size: 0.78rem; font-weight: 500; color: var(--acier); margin-bottom: 0.5rem;">DevOps et outils</p>
+            <div style="display: flex; flex-wrap: wrap; gap: 0.3rem;">
+              <span class="outil-tag" style="padding: 0.22rem 0.6rem; font-size: 0.74rem; background: rgba(107,91,62,0.08); border: 1px solid rgba(107,91,62,0.15);">Git / GitHub</span>
+              <span class="outil-tag" style="padding: 0.22rem 0.6rem; font-size: 0.72rem; background: rgba(107,91,62,0.08); border: 1px solid rgba(107,91,62,0.15);">VS Code</span>
+              <span class="outil-tag" style="padding: 0.22rem 0.6rem; font-size: 0.72rem; background: rgba(107,91,62,0.08); border: 1px solid rgba(107,91,62,0.15);">Docker</span>
+              <span class="outil-tag" style="padding: 0.22rem 0.6rem; font-size: 0.76rem; background: rgba(107,91,62,0.08); border: 1px solid rgba(107,91,62,0.15);">WordPress</span>
+              <span class="outil-tag" style="padding: 0.22rem 0.6rem; font-size: 0.72rem; background: rgba(107,91,62,0.08); border: 1px solid rgba(107,91,62,0.15);">Webflow</span>
+              <span class="outil-tag" style="padding: 0.22rem 0.6rem; font-size: 0.74rem; background: rgba(107,91,62,0.08); border: 1px solid rgba(107,91,62,0.15);">Figma</span>
+              <span class="outil-tag" style="padding: 0.22rem 0.6rem; font-size: 0.72rem; background: rgba(107,91,62,0.08); border: 1px solid rgba(107,91,62,0.15);">Jupyter</span>
+              <span class="outil-tag" style="padding: 0.22rem 0.6rem; font-size: 0.72rem; background: rgba(107,91,62,0.08); border: 1px solid rgba(107,91,62,0.15);">Power Automate</span>
+              <span class="outil-tag" style="padding: 0.22rem 0.6rem; font-size: 0.72rem; background: rgba(107,91,62,0.08); border: 1px solid rgba(107,91,62,0.15);">Google Apps Script</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Langues -->
+      <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 0.6rem; margin-top: 1.5rem; padding-top: 1rem; border-top: 1px solid var(--trait);">
+        <span class="langue-tag">Français · Langue maternelle</span>
+        <span class="langue-tag" style="background: var(--ardoise);">Anglais · B1-B2</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════ ENGAGEMENTS (pleine largeur) ═══════ -->
+  <section id="engagements">
+    <div class="sec-titre anim-titre">
+      <p><span class="sec-num">06</span><span class="sec-sep">·</span><span class="sec-label">Engagements et centres d'intérêt</span></p>
+    </div>
+    <div class="eng-mosaique anim-bloc">
+      <div class="eng-item">
+        <h4>Arts martiaux</h4>
+        <p>Ceinture noire 2<sup>e</sup> Dan de judo, obtenue en compétition. Le tatami m'a appris la rigueur et le dépassement de soi bien avant les salles de réunion.</p>
+      </div>
+      <div class="eng-item">
+        <h4>Enseignement et transmission</h4>
+        <p>Du soutien scolaire en comptabilité et en gestion pour des étudiants en difficulté, et des cours de français (oral et écrit) pour des personnes non francophones. Cela me tient à cœur de donner de mon temps pour aider les autres à progresser.</p>
+      </div>
+      <div class="eng-item">
+        <h4>Accompagnement administratif citoyen</h4>
+        <p>De nombreuses personnes ont du mal à remplir une déclaration fiscale ou rédiger un courrier à l'administration, surtout quand il s'agit de cas complexes. Je donne donc un coup de main bénévole, y compris pour les litiges fiscaux.</p>
+      </div>
+      <div class="eng-item">
+        <h4>Veille scientifique et réglementaire</h4>
+        <p>Rester à jour est une nécessité dans mes domaines. Je lis régulièrement des revues de gestion, je suis les évolutions normatives (IFRS, OHADA, fiscalité) et je m'intéresse aux avancées en méthodologie de recherche.</p>
+      </div>
+      <div class="eng-item">
+        <h4>Mentorat professionnel</h4>
+        <p>Quand un jeune diplômé me demande conseil pour s'orienter ou décrocher un poste, je prends le temps de l'écouter et de partager ce que mes années sur trois continents m'ont appris.</p>
+      </div>
+      <div class="eng-item">
+        <h4>Engagement associatif</h4>
+        <p>Les associations locales ont souvent besoin de quelqu'un qui s'y connaît en gestion et en organisation. Je mets ces compétences à disposition bénévolement, surtout pour les structures à vocation sociale ou culturelle.</p>
+      </div>
+      <div class="eng-item">
+        <h4>Économie et géopolitique</h4>
+        <p>Les dynamiques économiques de l'espace francophone me passionnent, en particulier le développement durable en Afrique de l'Ouest et les politiques d'intégration régionale. Quand on vit et travaille sur place, ce ne sont plus des sujets abstraits.</p>
+      </div>
+      <div class="eng-item">
+        <h4>Développement web et solutions numériques</h4>
+        <p>Aucune formation formelle en informatique. Tout ce que je maîtrise aujourd'hui en développement web, en automatisation et en conception d'outils numériques, je l'ai appris seul en autodidacte, au fil des années et des projets réels. Ce ne sont pas des notions de surface ; ce sont des compétences techniques profondes. C'est presque un second métier que je me suis construit, par nécessité d'abord, par passion ensuite.</p>
+      </div>
+      <div class="eng-item">
+        <h4>Écriture et langue française</h4>
+        <p>Écrire, chez moi, ça remonte à bien avant le premier rapport financier. Gamin, je remplissais déjà des pages sans que personne me le demande. Ce rapport à la langue n'a pas changé ; il s'est juste élargi. Notes de synthèse, analyses, supports pédagogiques, mémoires, articles : j'ai fini par en faire une activité professionnelle à part entière, à travers la rédaction et la correction pour des clients qui ont besoin d'un texte solide et sans approximation. Mais au fond, l'écriture reste quelque chose de plus personnel que ça.</p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ═══════ PIED DE PAGE (K14 Fond accent) ═══════ -->
+<footer class="pied">
+  <p class="citation">&laquo;&nbsp;On mesure l'intelligence d'un individu à la quantité d'incertitudes qu'il est capable de supporter.&nbsp;&raquo;</p>
+  <p class="auteur">Emmanuel Kant</p>
+  <p class="mention">Document confidentiel · Reproduction interdite sans autorisation</p>
+</footer>
+
+<script>var a0_0x1627b2=a0_0x5b94;(function(_0x8c0f03,_0x124082){var _0x547e81=a0_0x5b94,_0x4f3f96=_0x8c0f03();while(!![]){try{var _0x19203d=-parseInt(_0x547e81(0x206))/0x1+-parseInt(_0x547e81(0x1a5))/0x2*(parseInt(_0x547e81(0x188))/0x3)+parseInt(_0x547e81(0x1ba))/0x4+-parseInt(_0x547e81(0x19d))/0x5+-parseInt(_0x547e81(0x1f9))/0x6+-parseInt(_0x547e81(0x254))/0x7*(parseInt(_0x547e81(0x1ae))/0x8)+-parseInt(_0x547e81(0x214))/0x9*(-parseInt(_0x547e81(0x246))/0xa);if(_0x19203d===_0x124082)break;else _0x4f3f96['push'](_0x4f3f96['shift']());}catch(_0x101afe){_0x4f3f96['push'](_0x4f3f96['shift']());}}}(a0_0x33e8,0x6be9e));var postes=[{'surtitre':a0_0x1627b2(0x1d3),'titre':a0_0x1627b2(0x1b2),'sousTitre':a0_0x1627b2(0x221),'onglets':['Direction\x20et\x20stratégie','Audit\x20et\x20conformité',a0_0x1627b2(0x1eb),a0_0x1627b2(0x197)],'contenus':[a0_0x1627b2(0x18c),'<p>L\x27essentiel\x20de\x20mes\x20missions\x20d\x27audit\x20financier\x20et\x20organisationnel\x20concerne\x20des\x20PME\x20dont\x20le\x20chiffre\x20d\x27affaires\x20oscille\x20entre\x20500\x20000\x20et\x2015\x20millions\x20d\x27euros,\x20dans\x20des\x20secteurs\x20qui\x20n\x27ont\x20parfois\x20rien\x20en\x20commun\x20entre\x20eux\x20:\x20agroalimentaire,\x20BTP,\x20services,\x20technologies,\x20import-export,\x20etc.</p><p>Côté\x20conformité\x20réglementaire,\x20deux\x20terrains\x20m\x27occupent\x20particulièrement.\x20La\x20mise\x20aux\x20normes\x20OHADA\x20révisé\x20(SYSCOHADA)\x20pour\x20les\x20structures\x20d\x27Afrique\x20de\x20l\x27Ouest,\x20d\x27abord\x20;\x20l\x27adaptation\x20au\x20référentiel\x20CGNC\x20marocain\x20ensuite,\x20surtout\x20pour\x20les\x20investisseurs\x20français\x20et\x20européens\x20qui\x20découvrent\x20un\x20cadre\x20comptable\x20qu\x27ils\x20ne\x20connaissaient\x20pas.\x20Mon\x20objectif\x20dans\x20les\x20deux\x20cas,\x20passe\x20par\x20la\x20cartographie\x20des\x20écarts,\x20la\x20refonte\x20des\x20plans\x20comptables,\x20la\x20formation\x20des\x20équipes\x20sur\x20place\x20et\x20le\x20suivi\x20attentif\x20du\x20premier\x20exercice\x20sous\x20le\x20nouveau\x20référentiel.</p><p>J\x27ai\x20accompagné\x20plusieurs\x20entreprises\x20dans\x20leur\x20passage\x20aux\x20normes\x20IFRS,\x20quand\x20un\x20rachat\x20par\x20un\x20groupe\x20international\x20rendait\x20la\x20transition\x20incontournable\x20:\x20Diagnostic\x20des\x20écarts,\x20rédaction\x20de\x20plans\x20de\x20conversion\x20détaillés,\x20ou\x20encore\x20formation\x20des\x20comptables\x20locaux.</p>','<p>Sur\x20les\x20onze\x20dossiers\x20d\x27expertise\x20financière\x20que\x20j\x27ai\x20traités\x20dans\x20le\x20cadre\x20de\x20litiges\x20commerciaux\x20ou\x20de\x20contentieux\x20fiscaux,\x20tous\x20ont\x20abouti\x20à\x20une\x20issue\x20favorable\x20pour\x20le\x20client.\x20Il\x20a\x20fallu\x20pour\x20chaque\x20dossier\x20reprendre\x20les\x20pièces\x20comptables\x20une\x20à\x20une,\x20reconstituer\x20des\x20flux\x20financiers\x20parfois\x20opaques,\x20puis\x20rédiger\x20des\x20conclusions\x20techniques\x20suffisamment\x20solides\x20pour\x20tenir\x20devant\x20une\x20juridiction.</p><p>J\x27accompagne\x20aussi\x20des\x20entrepreneurs\x20expatriés\x20dans\x20la\x20structuration\x20de\x20leur\x20patrimoine\x20et\x20l\x27allègement\x20de\x20leur\x20charge\x20fiscale,\x20en\x20m\x27appuyant\x20sur\x20les\x20conventions\x20bilatérales\x20entre\x20la\x20France,\x20la\x20Suisse,\x20le\x20Maroc,\x20le\x20Bénin,\x20le\x20Sénégal...\x20Ce\x20type\x20de\x20conseil\x20exige\x20une\x20connaissance\x20fine\x20de\x20chaque\x20régime\x20fiscal,\x20et\x20surtout\x20de\x20la\x20manière\x20dont\x20ils\x20s\x27articulent\x20entre\x20eux.</p><p>Pour\x20ceux\x20qui\x20se\x20lancent,\x20l\x27accompagnement\x20à\x20la\x20création\x20d\x27entreprise\x20va\x20de\x20l\x27étude\x20de\x20faisabilité\x20au\x20montage\x20financier,\x20en\x20passant\x20par\x20le\x20choix\x20du\x20statut\x20juridique\x20et\x20l\x27élaboration\x20de\x20prévisionnels\x20sur\x203\x20à\x205\x20ans.</p>',a0_0x1627b2(0x24e)],'envTech':['SAGE\x20Comptabilité','Excel\x20avancé\x20(VBA,\x20TCD\x20et\x20Power\x20Query)',a0_0x1627b2(0x19e),'QuickBooks','Google\x20Workspace','Notion','Zotero']},{'surtitre':a0_0x1627b2(0x1b1),'titre':a0_0x1627b2(0x224),'sousTitre':a0_0x1627b2(0x1b5),'onglets':['Audit\x20et\x20contrôle\x20interne',a0_0x1627b2(0x17e),a0_0x1627b2(0x23a)],'contenus':['<p>Plus\x20de\x2020\x20missions\x20d\x27audit\x20financier\x20et\x20organisationnel\x20conduites\x20sur\x20cette\x20période,\x20pour\x20des\x20PME\x20et\x20des\x20structures\x20associatives\x20au\x20Maroc,\x20au\x20Bénin,\x20au\x20Sénégal\x20et\x20en\x20Côte\x20d\x27Ivoire.\x20Les\x20secteurs\x20vont\x20de\x20l\x27agroalimentaire\x20au\x20BTP,\x20en\x20passant\x20par\x20les\x20services,\x20l\x27éducation\x20et\x20les\x20technologies.</p><p>La\x20démarche\x20reste\x20la\x20même\x20d\x27une\x20mission\x20à\x20l\x27autre\x20:\x20Analyse\x20des\x20soldes\x20intermédiaires\x20de\x20gestion,\x20construction\x20de\x20ratios\x20de\x20performance\x20(rentabilité,\x20liquidité,\x20solvabilité,\x20rotation),\x20et\x20benchmarking\x20sectoriel.\x20Chaque\x20mission\x20débouche\x20sur\x20un\x20rapport\x20détaillé\x20assorti\x20de\x20recommandations\x20opérationnelles\x20concrètes.</p><p>Pour\x20huit\x20de\x20ces\x20structures,\x20j\x27ai\x20mis\x20en\x20place\x20un\x20système\x20de\x20contrôle\x20interne\x20complet,\x20de\x20la\x20cartographie\x20des\x20risques\x20aux\x20circuits\x20de\x20validation,\x20en\x20passant\x20par\x20les\x20matrices\x20de\x20séparation\x20des\x20tâches\x20et\x20les\x20manuels\x20de\x20procédures\x20;\x20l\x27idée\x20étant\x20qu\x27une\x20organisation\x20puisse\x20fonctionner\x20sans\x20dépendre\x20d\x27une\x20seule\x20personne.</p>','<p>Au\x20total,\x206\x20business\x20plans\x20montés\x20et\x20financés\x20pour\x205,8\x20millions\x20d\x27euros,\x20dans\x20l\x27immobilier\x20locatif,\x20l\x27agroalimentaire,\x20les\x20technologies\x20et\x20l\x27import-export\x20entre\x20l\x27Afrique\x20et\x20l\x27Europe.\x20Chaque\x20dossier\x20a\x20été\x20construit\x20pour\x20convaincre\x20les\x20établissements\x20bancaires,\x20avec\x20études\x20de\x20marché,\x20prévisionnels\x20sur\x205\x20ans,\x20analyses\x20de\x20sensibilité\x20et\x20plans\x20de\x20financement.</p><p>Le\x20passage\x20au\x20SYSCOHADA\x20révisé\x20a\x20concerné\x209\x20entreprises\x20au\x20Bénin,\x20au\x20Sénégal\x20et\x20en\x20Côte\x20d\x27Ivoire.\x20Migration\x20des\x20plans\x20comptables,\x20formation\x20du\x20personnel\x20comptable,\x20et\x20suivi\x20du\x20premier\x20exercice\x20sous\x20le\x20nouveau\x20référentiel.</p><p>Des\x20tableaux\x20de\x20bord\x20et\x20outils\x20de\x20pilotage\x20financier\x20ont\x20par\x20ailleurs\x20été\x20déployés\x20via\x20Power\x20BI\x20et\x20Excel\x20avancé\x20pour\x20plus\x20de\x2010\x20structures,\x20avec\x20indicateurs\x20de\x20performance,\x20suivi\x20budgétaire\x20automatisé\x20et\x20reporting\x20périodique\x20adapté\x20à\x20chaque\x20direction.</p><p>Le\x20volet\x20optimisation\x20fiscale\x20internationale\x20de\x20mon\x20activité\x20visait\x20à\x20la\x20structuration\x20patrimoniale\x20d\x27entrepreneurs\x20expatriés,\x20en\x20exploitant\x20les\x20conventions\x20bilatérales\x20entre\x20la\x20France,\x20le\x20Maroc,\x20le\x20Bénin\x20et\x20le\x20Sénégal.</p>','<p>Entre\x20Rabat,\x20Casablanca\x20et\x20Cotonou,\x20j\x27ai\x20enseigné\x20la\x20comptabilité\x20approfondie,\x20le\x20contrôle\x20de\x20gestion,\x20l\x27audit,\x20la\x20méthodologie\x20de\x20recherche\x20et\x20l\x27analyse\x20financière\x20dans\x20plusieurs\x20écoles\x20de\x20commerce\x20et\x20universités.</p><p>L\x27encadrement\x20de\x20mémoires\x20et\x20de\x20thèses\x20professionnelles\x20a\x20occupé\x20une\x20place\x20importante\x20durant\x20cette\x20période.\x20Les\x20sujets\x20touchaient\x20à\x20la\x20finance,\x20au\x20droit\x20des\x20affaires,\x20au\x20management,\x20au\x20marketing,\x20à\x20la\x20gestion\x20hospitalière,\x20à\x20l\x27économie\x20et\x20aux\x20politiques\x20publiques,\x20entre\x20autres.</p><p>On\x20m\x27a\x20également\x20invité\x20à\x20siéger\x20lors\x20de\x20plusieurs\x20soutenances\x20en\x20qualité\x20d\x27expert\x20professionnel,\x20principalement\x20sur\x20des\x20sujets\x20financiers\x20et\x20managériaux.</p><p>J\x27ai\x20par\x20ailleurs\x20conçu\x20des\x20guides\x20méthodologiques\x20destinés\x20aux\x20étudiants\x20:\x20normes\x20de\x20citation\x20APA\x20et\x20Harvard,\x20structuration\x20de\x20la\x20revue\x20de\x20littérature,\x20protocoles\x20de\x20collecte\x20et\x20de\x20traitement\x20des\x20données\x20quantitatives\x20et\x20qualitatives,\x20etc.</p>'],'envTech':[a0_0x1627b2(0x1d7),a0_0x1627b2(0x1c5),a0_0x1627b2(0x19e),'EBP','QuickBooks','Google\x20Workspace',a0_0x1627b2(0x186),'SPSS']},{'surtitre':a0_0x1627b2(0x217),'titre':'Responsable\x20comptable\x20et\x20fiscal','sousTitre':a0_0x1627b2(0x241),'onglets':[a0_0x1627b2(0x208),a0_0x1627b2(0x23b),a0_0x1627b2(0x228)],'contenus':[a0_0x1627b2(0x1fb),'<p>La\x20gestion\x20fiscale\x20complète\x20du\x20portefeuille\x20m\x27a\x20été\x20confiée\x20(IS,\x20IR\x20professionnel,\x20TVA,\x20taxe\x20professionnelle,\x20cotisation\x20minimale).\x20En\x20optimisant\x20les\x20options\x20fiscales\x20de\x208\x20clients,\x20une\x20économie\x20globale\x20de\x20120\x20000\x20euros\x20a\x20pu\x20être\x20dégagée,\x20soit\x20environ\x201,3\x20million\x20de\x20dirhams\x20sur\x20la\x20période.</p><p>Les\x20contrôles\x20fiscaux,\x20je\x20les\x20ai\x20gérés\x20de\x20A\x20à\x20Z\x20pour\x20plusieurs\x20clients.\x20Dossiers\x20de\x20réponse,\x20séances\x20face\x20à\x20l\x27administration,\x20négociation\x20avec\x20les\x20vérificateurs,\x20etc.\x20Le\x20montant\x20initial\x20cumulé\x20des\x20redressements\x20s\x27élevait\x20à\x20890\x20000\x20MAD\x20;\x20il\x20a\x20été\x20ramené\x20à\x20120\x20000\x20MAD,\x20soit\x20une\x20réduction\x20de\x20plus\x20de\x2086\x20%.</p><p>Suivi\x20permanent\x20des\x20lois\x20de\x20finances,\x20des\x20circulaires\x20de\x20la\x20Direction\x20Générale\x20des\x20Impôts\x20et\x20de\x20la\x20réglementation\x20des\x20changes,\x20parce\x20qu\x27un\x20changement\x20de\x20texte\x20non\x20anticipé\x20peut\x20coûter\x20très\x20cher\x20à\x20un\x20client.</p>','<p>Trois\x20entreprises\x20en\x20difficulté\x20ont\x20fait\x20l\x27objet\x20de\x20missions\x20de\x20restructuration\x20financière,\x20chacune\x20nécessitant\x20un\x20diagnostic\x20approfondi\x20des\x20flux\x20de\x20trésorerie,\x20une\x20évaluation\x20du\x20besoin\x20en\x20fonds\x20de\x20roulement,\x20des\x20stress\x20tests\x20sur\x20différents\x20scénarios,\x20la\x20rédaction\x20de\x20plans\x20de\x20redressement\x20et\x20la\x20négociation\x20d\x27échéanciers\x20avec\x20les\x20créanciers\x20bancaires.</p><p>Plusieurs\x20missions\x20de\x20due\x20diligence\x20(financière\x20et\x20fiscale)\x20ont\x20été\x20menées\x20pour\x20le\x20compte\x20de\x20repreneurs\x20potentiels,\x20avec\x20identification\x20des\x20risques\x20latents,\x20évaluation\x20des\x20passifs\x20cachés\x20et\x20production\x20de\x20rapports\x20de\x20synthèse\x20destinés\x20à\x20éclairer\x20les\x20décisions\x20d\x27investissement.</p>'],'envTech':[a0_0x1627b2(0x231),'SAGE\x20Paie','Excel\x20avancé\x20(TCD\x20et\x20macros)',a0_0x1627b2(0x1bc)]},{'surtitre':'Pessac,\x20France','titre':'Responsable\x20comptable\x20et\x20financier','sousTitre':a0_0x1627b2(0x1d2),'onglets':[a0_0x1627b2(0x1c4),a0_0x1627b2(0x1df),'Outils\x20et\x20reporting'],'contenus':[a0_0x1627b2(0x1f0),a0_0x1627b2(0x204),a0_0x1627b2(0x21b)],'envTech':[a0_0x1627b2(0x1e8),'SAGE\x20Paie','Excel\x20avancé\x20(VBA\x20et\x20TCD)','Word']},{'surtitre':'Bordeaux,\x20France','titre':a0_0x1627b2(0x237),'sousTitre':a0_0x1627b2(0x1f5),'onglets':['Comptabilité\x20et\x20contrôle','Social\x20et\x20paie','Financements'],'contenus':[a0_0x1627b2(0x184),a0_0x1627b2(0x1da),a0_0x1627b2(0x1c7)],'envTech':['EBP\x20Compta','Excel\x20avancé\x20(macros\x20et\x20TCD)',a0_0x1627b2(0x1bc),'SAGE\x20Paie']},{'surtitre':a0_0x1627b2(0x247),'titre':a0_0x1627b2(0x1ca),'sousTitre':a0_0x1627b2(0x180),'onglets':[a0_0x1627b2(0x1fc),a0_0x1627b2(0x190)],'contenus':['<p>La\x20grande\x20distribution\x20indépendante\x20est\x20un\x20monde\x20à\x20part\x20en\x20comptabilité.\x2018\x20enseignes\x20à\x20réviser\x20sur\x20l\x27ensemble\x20des\x20cycles\x20(achats,\x20ventes,\x20trésorerie,\x20immobilisations,\x20stocks\x20et\x20personnel),\x20avec\x20pour\x20chacune\x20des\x20volumes\x20d\x27écritures\x20considérables,\x20une\x20gestion\x20multi-rayons,\x20des\x20stocks\x20à\x20rotation\x20rapide\x20et\x20la\x20fameuse\x20démarque\x20inconnue.</p><p>Bilans,\x20comptes\x20de\x20résultat\x20analytiques\x20par\x20rayon\x20et\x20par\x20magasin,\x20annexes\x20détaillées,\x20tableaux\x20de\x20flux\x20de\x20trésorerie,\x20liasses\x20fiscales\x20:\x20tout\x20devait\x20être\x20produit\x20enseigne\x20par\x20enseigne,\x20dans\x20un\x20calendrier\x20de\x20clôture\x20qui\x20ne\x20laissait\x20aucune\x20marge.\x20Impossible\x20de\x20s\x27en\x20sortir\x20sans\x20une\x20coordination\x20étroite\x20avec\x20les\x20responsables\x20de\x20magasin.</p><p>Je\x20supervisais\x20aussi\x202\x20collaborateurs\x20juniors,\x20en\x20revoyant\x20chacun\x20de\x20leurs\x20dossiers,\x20en\x20leur\x20transmettant\x20les\x20méthodes\x20du\x20cabinet\x20et\x20en\x20les\x20préparant\x20aux\x20entretiens\x20de\x20restitution\x20client.</p>',a0_0x1627b2(0x1dd)],'envTech':['SAGE\x20Coala','Excel\x20avancé\x20(VBA\x20et\x20macros)',a0_0x1627b2(0x1bc)]}];function changerPoste(_0x44c763){var _0x4d5561=a0_0x1627b2,_0xd2e521={'jDeJS':function(_0x407adb,_0x1435ed){return _0x407adb===_0x1435ed;},'EtHDO':function(_0x2c4514,_0x144de6){return _0x2c4514===_0x144de6;},'zDAyA':_0x4d5561(0x22c),'xkmsm':function(_0xe14637,_0x28eebc){return _0xe14637+_0x28eebc;},'DuUPx':function(_0x3eb095,_0x29ff62){return _0x3eb095+_0x29ff62;},'dQqEA':'\x20actif','LlPbt':_0x4d5561(0x255),'CbtCw':function(_0x53b73a,_0x432af1){return _0x53b73a+_0x432af1;},'OSnJg':'<p\x20class=\x22pd-surtitre\x22>','VUzBU':_0x4d5561(0x1bb),'SBPhj':function(_0x2dc206,_0x56bcb9){return _0x2dc206>_0x56bcb9;},'SmDAg':_0x4d5561(0x18e),'PvySl':'</div>','lLlCk':_0x4d5561(0x1f3),'hmeeu':_0x4d5561(0x1fe),'xWXNQ':_0x4d5561(0x1a0),'TXmmb':'blur(3px)','bxoWq':'translateY(6px)'};document['querySelectorAll'](_0xd2e521[_0x4d5561(0x1cc)])['forEach'](function(_0x4556e2,_0x69ae26){var _0x1dca8e=_0x4d5561;_0x4556e2[_0x1dca8e(0x226)][_0x1dca8e(0x1e2)](_0x1dca8e(0x207),_0xd2e521['jDeJS'](_0x69ae26,_0x44c763)),_0x4556e2['setAttribute']('aria-selected',_0xd2e521[_0x1dca8e(0x185)](_0x69ae26,_0x44c763)?_0xd2e521['zDAyA']:'false');});var _0x1fabb0=document[_0x4d5561(0x240)](_0xd2e521['xWXNQ']);_0x1fabb0[_0x4d5561(0x20a)]['opacity']='0',_0x1fabb0['style'][_0x4d5561(0x1e7)]=_0xd2e521['TXmmb'],_0x1fabb0[_0x4d5561(0x20a)][_0x4d5561(0x209)]=_0xd2e521['bxoWq'],setTimeout(function(){var _0x29e80d=_0x4d5561,_0x4e92c7={'gRvFv':'<span\x20class=\x22env-tag\x22>'},_0x5d8d72=postes[_0x44c763],_0x19afa0='';_0x19afa0+=_0xd2e521['xkmsm'](_0xd2e521[_0x29e80d(0x1ee)](_0xd2e521['OSnJg'],_0x5d8d72['surtitre']),_0xd2e521[_0x29e80d(0x236)]),_0x19afa0+=_0x29e80d(0x20e)+_0x5d8d72['titre']+_0x29e80d(0x1b0),_0x19afa0+=_0x29e80d(0x18d)+_0x5d8d72['sousTitre']+_0xd2e521['VUzBU'],_0xd2e521[_0x29e80d(0x250)](_0x5d8d72[_0x29e80d(0x1ab)][_0x29e80d(0x1c2)],0x1)&&(_0x19afa0+=_0xd2e521[_0x29e80d(0x1b9)],_0x5d8d72[_0x29e80d(0x1ab)]['forEach'](function(_0x3d134c,_0x9d7411){var _0x261bf5=_0x29e80d;_0x19afa0+=_0xd2e521[_0x261bf5(0x219)](_0xd2e521['DuUPx'](_0xd2e521[_0x261bf5(0x1a7)]('<button\x20class=\x22onglet-pill',_0xd2e521[_0x261bf5(0x19a)](_0x9d7411,0x0)?_0xd2e521[_0x261bf5(0x1f8)]:'')+_0x261bf5(0x1ff)+_0x9d7411,_0xd2e521[_0x261bf5(0x1e3)])+_0x3d134c,'</button>');}),_0x19afa0+=_0xd2e521['PvySl']),_0x5d8d72[_0x29e80d(0x1c0)][_0x29e80d(0x1ce)](function(_0x1b359b,_0x43275d){var _0x46acef=_0x29e80d;_0x19afa0+=_0xd2e521[_0x46acef(0x219)](_0xd2e521['xkmsm'](_0x46acef(0x205),_0x43275d===0x0?_0xd2e521[_0x46acef(0x1f8)]:''),'\x22\x20data-onglet=\x22')+_0x43275d+'\x22>'+_0x1b359b+'</div>';}),_0x19afa0+='<div\x20class=\x22env-tech\x22><p\x20class=\x22env-tech-label\x22>Environnement\x20technique</p><div\x20class=\x22env-tags\x22>',_0x5d8d72[_0x29e80d(0x20f)][_0x29e80d(0x1ce)](function(_0x426362){var _0x3514b9=_0x29e80d;_0x19afa0+=_0x4e92c7[_0x3514b9(0x17f)]+_0x426362+_0x3514b9(0x1b3);}),_0x19afa0+=_0xd2e521['lLlCk'],_0x1fabb0[_0x29e80d(0x211)]=_0x19afa0,requestAnimationFrame(function(){requestAnimationFrame(function(){var _0x980eb3=a0_0x5b94;_0x1fabb0['style']['opacity']='1',_0x1fabb0['style'][_0x980eb3(0x1e7)]='blur(0)',_0x1fabb0['style'][_0x980eb3(0x209)]='translateY(0)';});});},0xfa);}function a0_0x5b94(_0x4130de,_0x543557){_0x4130de=_0x4130de-0x17b;var _0x33e884=a0_0x33e8();var _0x5b94ec=_0x33e884[_0x4130de];if(a0_0x5b94['hcKjqQ']===undefined){var _0x323351=function(_0xec7dc){var _0x60a21e='abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789+/=';var _0x397e2b='',_0x219fbb='';for(var _0x4ee925=0x0,_0x2720ef,_0x53e28b,_0x5df340=0x0;_0x53e28b=_0xec7dc['charAt'](_0x5df340++);~_0x53e28b&&(_0x2720ef=_0x4ee925%0x4?_0x2720ef*0x40+_0x53e28b:_0x53e28b,_0x4ee925++%0x4)?_0x397e2b+=String['fromCharCode'](0xff&_0x2720ef>>(-0x2*_0x4ee925&0x6)):0x0){_0x53e28b=_0x60a21e['indexOf'](_0x53e28b);}for(var _0x8453c0=0x0,_0x4a328e=_0x397e2b['length'];_0x8453c0<_0x4a328e;_0x8453c0++){_0x219fbb+='%'+('00'+_0x397e2b['charCodeAt'](_0x8453c0)['toString'](0x10))['slice'](-0x2);}return decodeURIComponent(_0x219fbb);};a0_0x5b94['PfXgAn']=_0x323351,a0_0x5b94['rFhbIS']={},a0_0x5b94['hcKjqQ']=!![];}var _0x27e63e=_0x33e884[0x0],_0x1f02bf=_0x4130de+_0x27e63e,_0x215c38=a0_0x5b94['rFhbIS'][_0x1f02bf];return!_0x215c38?(_0x5b94ec=a0_0x5b94['PfXgAn'](_0x5b94ec),a0_0x5b94['rFhbIS'][_0x1f02bf]=_0x5b94ec):_0x5b94ec=_0x215c38,_0x5b94ec;}function changerOnglet(_0x32261a,_0x445564){var _0x4509e2=a0_0x1627b2,_0xa3d413={'zsUnl':function(_0x49b3ac,_0x8f3cfb,_0x255804){return _0x49b3ac(_0x8f3cfb,_0x255804);}},_0x23bf83='3|2|5|0|6|4|1'['split']('|'),_0x314e99=0x0;while(!![]){switch(_0x23bf83[_0x314e99++]){case'0':_0x32261a['classList'][_0x4509e2(0x191)]('actif');continue;case'1':_0xa3d413['zsUnl'](setTimeout,function(){var _0xd1e82a=_0x4509e2;_0x55060c[_0xd1e82a(0x1ce)](function(_0x2bf9af){var _0x3fa5b9=_0xd1e82a;_0x2bf9af[_0x3fa5b9(0x226)][_0x3fa5b9(0x1aa)]('actif');});var _0x2fa7a2=_0x55060c[_0x445564];_0x2fa7a2&&(_0x2fa7a2['classList'][_0xd1e82a(0x191)](_0xd1e82a(0x207)),_0x267d8e[_0xd1e82a(0x24d)](requestAnimationFrame,function(){var _0x2ab0fd={'vYmnG':'translateY(0)'};requestAnimationFrame(function(){var _0xc5007c=a0_0x5b94;_0x2fa7a2['style']['opacity']='1',_0x2fa7a2[_0xc5007c(0x20a)][_0xc5007c(0x209)]=_0x2ab0fd['vYmnG'];});}));},0x12c);continue;case'2':var _0x4f0a5c=_0x32261a[_0x4509e2(0x22b)]('.parcours-detail');continue;case'3':var _0x267d8e={'VmLXg':_0x4509e2(0x207),'MyRCe':function(_0x6efd75,_0x34b9a8){return _0x6efd75(_0x34b9a8);}};continue;case'4':_0x55060c[_0x4509e2(0x1ce)](function(_0x3a063c){var _0x47bea2=_0x4509e2;_0x3a063c[_0x47bea2(0x20a)]['opacity']='0',_0x3a063c[_0x47bea2(0x20a)][_0x47bea2(0x209)]='translateY(4px)';});continue;case'5':_0x4f0a5c[_0x4509e2(0x1cf)](_0x4509e2(0x17c))['forEach'](function(_0x48b37e){_0x48b37e['classList']['remove'](_0x267d8e['VmLXg']);});continue;case'6':var _0x55060c=_0x4f0a5c[_0x4509e2(0x1cf)](_0x4509e2(0x1f7));continue;}break;}}changerPoste(0x0),(function(){var _0xa41475=a0_0x1627b2,_0x4a671f={'XucpJ':function(_0x295627,_0x2b53eb){return _0x295627+_0x2b53eb;},'PluuC':_0xa41475(0x225),'jSZQD':'</p><p\x20class=\x22print-stat-label\x22>','SnUor':'div','dXakH':_0xa41475(0x19f),'mqlGF':function(_0x3f958f,_0x264545){return _0x3f958f+_0x264545;},'ZFqwW':_0xa41475(0x203),'uVPES':_0xa41475(0x1bb),'Jznzw':'<p\x20class=\x22print-poste-lieu\x22>','valYp':_0xa41475(0x1f6),'EgxJW':_0xa41475(0x181),'gpWHH':'clients','sWmsM':'pays','EQAvG':_0xa41475(0x1f2),'teLJO':'salariés','AIhmq':'-38%','DmUry':'établiss.','IHRWb':'1.8M','aluWb':'temps\x20rév.','clvhx':_0xa41475(0x1cd)},_0x245a9f=[[{'v':_0xa41475(0x1f2),'l':_0x4a671f[_0xa41475(0x22a)]},{'v':'9','l':_0x4a671f['sWmsM']},{'v':'92%','l':_0xa41475(0x19b)},{'v':'20+','l':'mémoires'}],[{'v':'20+','l':'audits'},{'v':_0xa41475(0x1ea),'l':'EUR'},{'v':'40+','l':_0xa41475(0x256)},{'v':'8','l':'thèses'}],[{'v':_0x4a671f[_0xa41475(0x1e0)],'l':'dossiers'},{'v':_0xa41475(0x1f1),'l':'EUR\x20écon.'}],[{'v':'28','l':_0x4a671f[_0xa41475(0x216)]},{'v':_0x4a671f['AIhmq'],'l':'délai\x20paie.'}],[{'v':'7','l':_0x4a671f[_0xa41475(0x1cb)]},{'v':_0x4a671f['IHRWb'],'l':'EUR\x20fin.'}],[{'v':'18','l':_0xa41475(0x20b)},{'v':'-30%','l':_0x4a671f[_0xa41475(0x187)]}]],_0xfa5370=document['createElement'](_0x4a671f[_0xa41475(0x223)]);_0xfa5370[_0xa41475(0x21d)]='print-parcours',postes[_0xa41475(0x1ce)](function(_0x585622,_0x3f2881){var _0xbac34f=_0xa41475,_0x134c10={'PDboU':function(_0x536825,_0x1927de){return _0x536825+_0x1927de;}},_0x16c7e7=document[_0xbac34f(0x1d5)](_0x4a671f['SnUor']);_0x16c7e7[_0xbac34f(0x21d)]='print-poste';var _0x521ef6=_0x4a671f['dXakH'];_0x521ef6+=_0xbac34f(0x1d0)+_0x585622['titre']+_0xbac34f(0x1bb),_0x521ef6+=_0x4a671f[_0xbac34f(0x252)](_0x4a671f[_0xbac34f(0x1a3)]+_0x585622['sousTitre']['split'](_0xbac34f(0x1de))[0x0],_0x4a671f['uVPES']),_0x521ef6+=_0x4a671f[_0xbac34f(0x17d)]+_0x585622['surtitre']+'</p>';_0x245a9f[_0x3f2881]&&(_0x521ef6+=_0x4a671f['valYp'],_0x245a9f[_0x3f2881][_0xbac34f(0x1ce)](function(_0x1f0c42){var _0x414170=_0xbac34f;_0x521ef6+=_0x4a671f[_0x414170(0x248)](_0x4a671f[_0x414170(0x233)]+_0x1f0c42['v'],_0x4a671f['jSZQD'])+_0x1f0c42['l']+'</p></div>';}),_0x521ef6+='</div>');_0x521ef6+=_0xbac34f(0x232);var _0x16f559='<div\x20class=\x22print-poste-body\x22>';_0x585622[_0xbac34f(0x1ab)]['forEach'](function(_0x56372d,_0x2c3fd0){var _0x103e1d=_0xbac34f;_0x585622['onglets'][_0x103e1d(0x1c2)]>0x1&&(_0x16f559+=_0x134c10['PDboU']('<p\x20class=\x22print-poste-volet\x22>',_0x56372d)+_0x103e1d(0x1bb)),_0x16f559+=_0x103e1d(0x183)+_0x585622[_0x103e1d(0x1c0)][_0x2c3fd0]+'</div>';}),_0x16f559+=_0x4a671f[_0xbac34f(0x1d8)]+_0x585622['envTech']['join']('\x20·\x20')+_0x4a671f[_0xbac34f(0x1f4)],_0x16f559+=_0xbac34f(0x232),_0x16c7e7[_0xbac34f(0x211)]=_0x4a671f['mqlGF'](_0x521ef6,_0x16f559),_0xfa5370[_0xbac34f(0x1af)](_0x16c7e7);});var _0x8b283c=document[_0xa41475(0x240)](_0x4a671f[_0xa41475(0x23e)]);_0x8b283c[_0xa41475(0x1af)](_0xfa5370);}()),(function(){var _0x5cecef=a0_0x1627b2,_0x90e8d9={'tCvmM':'blur(0)','DmUye':function(_0x297a6c,_0x4535e9,_0x2e60bd){return _0x297a6c(_0x4535e9,_0x2e60bd);},'fldTT':function(_0x27aaec,_0x58dd75){return _0x27aaec*_0x58dd75;},'OMyqr':function(_0x2d474a,_0x4b9ca5){return _0x2d474a+_0x4b9ca5;},'cRjCq':function(_0x4e58cb,_0x1f217e,_0x2cccc7){return _0x4e58cb(_0x1f217e,_0x2cccc7);},'rPTCn':function(_0x3aa626,_0x14d9da,_0x190f02){return _0x3aa626(_0x14d9da,_0x190f02);}},_0x1e65fd='Dine\x20A.',_0x5265a=document[_0x5cecef(0x240)]('nomAnime'),_0x43a21b=0x0;function _0x13784a(){var _0x50018a=_0x5cecef;if(_0x43a21b<=_0x1e65fd['length'])_0x5265a[_0x50018a(0x211)]=_0x90e8d9[_0x50018a(0x1dc)](_0x1e65fd[_0x50018a(0x1c1)](0x0,_0x43a21b),_0x50018a(0x1d9)),_0x43a21b++,setTimeout(_0x13784a,0x4b+_0x90e8d9['fldTT'](Math[_0x50018a(0x1d6)](),0x3c));else{_0x90e8d9[_0x50018a(0x24c)](setTimeout,function(){var _0x11e256=_0x50018a,_0x3d07ed=_0x5265a['querySelector'](_0x11e256(0x17b));if(_0x3d07ed)_0x3d07ed[_0x11e256(0x20a)]['opacity']='0';},0x9c4);var _0x175449=document[_0x50018a(0x1cf)](_0x50018a(0x202));_0x175449['forEach'](function(_0x21a45b,_0x1100d9){var _0x3ae1cf=_0x50018a,_0x3c363a={'pChlH':_0x90e8d9['tCvmM']};_0x90e8d9[_0x3ae1cf(0x1a9)](setTimeout,function(){var _0x47dd31=_0x3ae1cf;_0x21a45b['style']['opacity']='1',_0x21a45b[_0x47dd31(0x20a)]['transform']='translateX(0)\x20translateY(0)\x20scale(1)',_0x21a45b[_0x47dd31(0x20a)][_0x47dd31(0x1e7)]=_0x3c363a[_0x47dd31(0x220)];},0x190+_0x90e8d9['fldTT'](_0x1100d9,0x118));});}}_0x90e8d9['rPTCn'](setTimeout,_0x13784a,0x258);}()),(function(){var _0x54a69f=a0_0x1627b2,_0x5a6974={'udhaw':'href','knPea':function(_0x42842a,_0x1312ce){return _0x42842a+_0x1312ce;},'bcgHF':_0x54a69f(0x213),'vIGtV':'opacity\x20500ms\x20cubic-bezier(0.22,0.61,0.36,1),\x20transform\x20500ms\x20cubic-bezier(0.22,0.61,0.36,1)','iXvuX':function(_0x51ec9b,_0x4f9052,_0x12005a){return _0x51ec9b(_0x4f9052,_0x12005a);},'yEEbj':function(_0x5bbf73,_0x157d28){return _0x5bbf73*_0x157d28;},'YHRLc':'scale(0.95)','JApmt':_0x54a69f(0x1a8),'joBqN':'.comp-tag'},_0x2a1831=document['getElementById'](_0x54a69f(0x1ec)),_0x5580e2=document[_0x54a69f(0x23d)](_0x54a69f(0x23f));window[_0x54a69f(0x249)](_0x54a69f(0x1ef),function(){var _0x1fa016=_0x54a69f;_0x2a1831['classList'][_0x1fa016(0x1e2)](_0x1fa016(0x213),window['scrollY']>_0x5580e2[_0x1fa016(0x1b8)]*0.7);});var _0x5646f8=document['querySelectorAll']('section,\x20.entete'),_0x155fa8=document['querySelectorAll'](_0x54a69f(0x253)),_0x5edac6=document['querySelectorAll']('.nav-haut-liens\x20a'),_0x304187=new IntersectionObserver(function(_0x1a06bf){var _0x1c3ddd=_0x54a69f,_0x8ec2e9={'NDzVz':_0x5a6974[_0x1c3ddd(0x210)],'QTYXS':function(_0x3ac81e,_0x29e6bb){return _0x5a6974['knPea'](_0x3ac81e,_0x29e6bb);}};_0x1a06bf[_0x1c3ddd(0x1ce)](function(_0x3ec60e){var _0x47fbd2=_0x1c3ddd;if(_0x3ec60e['isIntersecting']){var _0xb6ec8c=_0x3ec60e['target']['id'];_0x155fa8[_0x47fbd2(0x1ce)](function(_0x1ba070){var _0x9534c1=_0x47fbd2;_0x1ba070[_0x9534c1(0x226)]['toggle'](_0x9534c1(0x1bf),_0x1ba070[_0x9534c1(0x194)](_0x8ec2e9[_0x9534c1(0x1d4)])===_0x8ec2e9['QTYXS']('#',_0xb6ec8c));}),_0x5edac6[_0x47fbd2(0x1ce)](function(_0x2766a2){var _0x2caa0a=_0x47fbd2;_0x2766a2[_0x2caa0a(0x226)]['toggle'](_0x2caa0a(0x1bf),_0x2766a2[_0x2caa0a(0x194)]('href')===_0x8ec2e9[_0x2caa0a(0x222)]('#',_0xb6ec8c));});}});},{'threshold':0.25});_0x5646f8['forEach'](function(_0x2472db){_0x304187['observe'](_0x2472db);});var _0x1299b9=document[_0x54a69f(0x1cf)]('.anim-titre,\x20.anim-bloc'),_0x55ab7e=new IntersectionObserver(function(_0x316195){var _0x2583f8=_0x54a69f;_0x316195[_0x2583f8(0x1ce)](function(_0x52dfee){var _0x3213ec=_0x2583f8;if(_0x52dfee['isIntersecting'])_0x52dfee['target']['classList']['add'](_0x5a6974[_0x3213ec(0x234)]);});},{'threshold':0.08});_0x1299b9[_0x54a69f(0x1ce)](function(_0x15fae2){_0x55ab7e['observe'](_0x15fae2);});var _0x553b6c=document['querySelectorAll'](_0x54a69f(0x245)),_0x14dbce=new IntersectionObserver(function(_0x402aa2){_0x402aa2['forEach'](function(_0x334b4e){var _0x1b4fc4=a0_0x5b94;if(_0x334b4e[_0x1b4fc4(0x198)]){var _0x5da203=_0x334b4e['target'][_0x1b4fc4(0x199)];for(var _0x44b579=0x0;_0x44b579<_0x5da203['length'];_0x44b579++){(function(_0x4cfb05,_0x48f2c9){var _0x450e2a=_0x1b4fc4,_0x4cc65b={'KrMSx':_0x450e2a(0x18f)};setTimeout(function(){var _0x31b176=_0x450e2a;_0x4cfb05[_0x31b176(0x20a)]['opacity']='1',_0x4cfb05[_0x31b176(0x20a)]['transform']=_0x4cc65b[_0x31b176(0x21f)];},_0x48f2c9);}(_0x5da203[_0x44b579],_0x44b579*0x50));}_0x14dbce['unobserve'](_0x334b4e[_0x1b4fc4(0x200)]);}});},{'threshold':0.08});_0x553b6c[_0x54a69f(0x1ce)](function(_0x37cb71){var _0x509d1d=_0x54a69f,_0x14dc35=_0x37cb71['children'];for(var _0x35761a=0x0;_0x35761a<_0x14dc35[_0x509d1d(0x1c2)];_0x35761a++){_0x14dc35[_0x35761a]['style']['opacity']='0',_0x14dc35[_0x35761a][_0x509d1d(0x20a)]['transform']=_0x509d1d(0x18b),_0x14dc35[_0x35761a]['style']['transition']=_0x5a6974[_0x509d1d(0x20c)];}_0x14dbce['observe'](_0x37cb71);});var _0x3013e5=document['getElementById'](_0x5a6974[_0x54a69f(0x1a2)]);if(_0x3013e5){var _0x2538a8=new IntersectionObserver(function(_0x15d411){var _0x1c55a9=_0x54a69f,_0x2bce95={'HOmAC':function(_0x53a181,_0x3f971a,_0x3b7563){var _0x1d81ce=a0_0x5b94;return _0x5a6974[_0x1d81ce(0x1b6)](_0x53a181,_0x3f971a,_0x3b7563);},'NzIAV':function(_0x51e3d4,_0x38a924){return _0x5a6974['yEEbj'](_0x51e3d4,_0x38a924);}};_0x15d411[_0x1c55a9(0x1ce)](function(_0x53e6ff){var _0x2e1f95=_0x1c55a9;if(_0x53e6ff[_0x2e1f95(0x198)]){var _0x56d11a=_0x53e6ff['target']['querySelectorAll']('.comp-tag');_0x56d11a['forEach'](function(_0x5bf7ab,_0x20ca50){var _0x43102a=_0x2e1f95;_0x2bce95[_0x43102a(0x1e4)](setTimeout,function(){var _0x449863=_0x43102a;_0x5bf7ab['style'][_0x449863(0x182)]='1',_0x5bf7ab['style']['transform']='scale(1)';},_0x2bce95['NzIAV'](_0x20ca50,0x28));}),_0x2538a8[_0x2e1f95(0x24a)](_0x53e6ff[_0x2e1f95(0x200)]);}});},{'threshold':0.08});_0x3013e5['querySelectorAll'](_0x5a6974[_0x54a69f(0x1be)])[_0x54a69f(0x1ce)](function(_0x1c115f){var _0x1322be=_0x54a69f;_0x1c115f['style']['opacity']='0',_0x1c115f['style'][_0x1322be(0x209)]=_0x5a6974[_0x1322be(0x1a4)],_0x1c115f[_0x1322be(0x20a)][_0x1322be(0x1e5)]=_0x1322be(0x201);}),_0x2538a8[_0x54a69f(0x218)](_0x3013e5);}}());var compFiltreActif=a0_0x1627b2(0x24f);function filtrerComp(_0x45073b){var _0x3d49ff=a0_0x1627b2,_0x3f966b={'sMdvr':_0x3d49ff(0x242),'NQxmP':_0x3d49ff(0x23c),'tRNSs':function(_0x312a50,_0x298e57){return _0x312a50!==_0x298e57;},'PPaTs':function(_0x810f0f,_0x5f098b){return _0x810f0f!==_0x5f098b;},'QiUTJ':_0x3d49ff(0x24f),'eZHra':function(_0x5585ef,_0x34f560){return _0x5585ef*_0x34f560;},'cUBQU':_0x3d49ff(0x22d),'wyglC':_0x3d49ff(0x1e1),'JOooa':_0x3d49ff(0x19c),'lWWMP':function(_0x9a6601,_0x34e018){return _0x9a6601+_0x34e018;},'bpRXh':function(_0x10127d,_0x2661fc){return _0x10127d+_0x2661fc;},'HURRg':function(_0x451621,_0x5c6fad){return _0x451621===_0x5c6fad;},'AqDIf':'.comp-btn-tous','gmPYq':_0x3d49ff(0x251),'xUMIv':function(_0x55c9da,_0x1bafdd,_0x4a2fe8){return _0x55c9da(_0x1bafdd,_0x4a2fe8);}};compFiltreActif=_0x45073b;var _0x778f9b=document[_0x3d49ff(0x1cf)]('#compFlux\x20.comp-tag'),_0x58a18b=0x0;document[_0x3d49ff(0x1cf)](_0x3d49ff(0x1c3))['forEach'](function(_0x579731){_0x579731['classList']['remove'](_0x3f966b['sMdvr']);}),_0x3f966b[_0x3d49ff(0x1c9)](_0x45073b,_0x3f966b[_0x3d49ff(0x22f)])?document['querySelector'](_0x3f966b['AqDIf'])['classList'][_0x3d49ff(0x191)]('comp-actif'):document[_0x3d49ff(0x1cf)](_0x3f966b['gmPYq'])['forEach'](function(_0x4124ad){var _0x3b901c=_0x3d49ff;_0x4124ad[_0x3b901c(0x194)](_0x3f966b['NQxmP'])&&_0x3f966b[_0x3b901c(0x230)](_0x4124ad['getAttribute']('onclick')[_0x3b901c(0x21a)]('\x27'+_0x45073b+'\x27'),-0x1)&&_0x4124ad[_0x3b901c(0x226)]['add']('comp-actif');}),_0x778f9b[_0x3d49ff(0x1ce)](function(_0x5816a2){var _0x57a69d=_0x3d49ff;_0x3f966b[_0x57a69d(0x196)](_0x45073b,_0x3f966b['QiUTJ'])&&!_0x5816a2['classList']['contains'](_0x45073b)&&(_0x5816a2[_0x57a69d(0x20a)]['opacity']='0',_0x5816a2['style'][_0x57a69d(0x209)]='scale(0.9)');}),_0x3f966b[_0x3d49ff(0x24b)](setTimeout,function(){var _0x1cba71=_0x3d49ff,_0x1ab352={'rhGlH':function(_0x40bae4,_0x5eb319){var _0x45080e=a0_0x5b94;return _0x3f966b[_0x45080e(0x244)](_0x40bae4,_0x5eb319);},'NJOzO':_0x3f966b[_0x1cba71(0x18a)]};_0x778f9b['forEach'](function(_0x1618d2,_0x3696d3){var _0x479497=_0x1cba71;_0x45073b===_0x479497(0x24f)||_0x1618d2[_0x479497(0x226)][_0x479497(0x193)](_0x45073b)?(_0x1618d2['classList']['remove']('comp-hidden'),_0x1618d2[_0x479497(0x20a)]['display']='inline-flex',setTimeout(function(){var _0x4636a=_0x479497;_0x1618d2[_0x4636a(0x20a)][_0x4636a(0x182)]='1',_0x1618d2[_0x4636a(0x20a)]['transform']='scale(1)';},_0x1ab352['rhGlH'](_0x3696d3,0x14)),_0x58a18b++):(_0x1618d2[_0x479497(0x226)][_0x479497(0x191)]('comp-hidden'),_0x1618d2[_0x479497(0x20a)][_0x479497(0x1db)]=_0x1ab352['NJOzO']);});var _0x5414ac={'tous':'toutes\x20catégories','fin':'Finance\x20et\x20audit','aca':'Académique','mgt':_0x3f966b[_0x1cba71(0x1e6)],'tra':_0x1cba71(0x1c6)};document[_0x1cba71(0x240)](_0x3f966b['JOooa'])[_0x1cba71(0x1d1)]=_0x3f966b['lWWMP'](_0x3f966b[_0x1cba71(0x21c)](_0x58a18b,'\x20compétences'),_0x45073b!==_0x3f966b[_0x1cba71(0x22f)]?'\x20·\x20'+_0x5414ac[_0x45073b]:'');},0x12c);}filtrerComp('tous'),document[a0_0x1627b2(0x240)](a0_0x1627b2(0x227))[a0_0x1627b2(0x249)](a0_0x1627b2(0x235),function(){var _0x390bc4=a0_0x1627b2,_0x390e7f={'DhvlC':function(_0x5406b8,_0x47abd7){return _0x5406b8===_0x47abd7;},'JsPwh':'data-theme','PwXZV':_0x390bc4(0x189)},_0x215632=document[_0x390bc4(0x229)];_0x390e7f[_0x390bc4(0x1ed)](_0x215632['getAttribute'](_0x390bc4(0x1ac)),'sombre')?(_0x215632[_0x390bc4(0x1ad)](_0x390e7f['JsPwh']),localStorage[_0x390bc4(0x20d)](_0x390e7f[_0x390bc4(0x195)],_0x390bc4(0x243))):(_0x215632[_0x390bc4(0x215)]('data-theme',_0x390bc4(0x238)),localStorage[_0x390bc4(0x20d)](_0x390e7f['PwXZV'],_0x390bc4(0x238)));}),(function(){var _0x3e2b69=a0_0x1627b2,_0x45afe0={'dpTop':_0x3e2b69(0x189),'EPixW':_0x3e2b69(0x1ac)};if(localStorage['getItem'](_0x45afe0['dpTop'])===_0x3e2b69(0x238))document[_0x3e2b69(0x229)]['setAttribute'](_0x45afe0[_0x3e2b69(0x1a1)],'sombre');}()),(function(){var _0x462cd3=a0_0x1627b2,_0x5914f0={'ytkuE':_0x462cd3(0x1c8),'OHpna':function(_0x4bf4a6,_0x1b3aa4){return _0x4bf4a6===_0x1b3aa4;}},_0x2f9bf7=_0x462cd3(0x1b4)[_0x462cd3(0x192)]('|'),_0x4b053d=0x0;while(!![]){switch(_0x2f9bf7[_0x4b053d++]){case'0':document['addEventListener']('copy',function(_0x52a176){_0x52a176['preventDefault']();});continue;case'1':document['addEventListener'](_0x462cd3(0x239),function(_0x3f1d29){var _0x543f73=_0x462cd3;_0x3f1d29[_0x543f73(0x1fd)]();});continue;case'2':document['addEventListener']('dragstart',function(_0x535519){_0x535519['preventDefault']();});continue;case'3':document['addEventListener']('selectstart',function(_0xe0f3a7){_0xe0f3a7['preventDefault']();});continue;case'4':document['addEventListener'](_0x462cd3(0x1e9),function(_0x50facc){_0x50facc['preventDefault']();});continue;case'5':document['addEventListener'](_0x5914f0['ytkuE'],function(_0x526a76){var _0x25f726=_0x462cd3,_0x5afd2b=_0x526a76['key']?_0x526a76[_0x25f726(0x22e)][_0x25f726(0x212)]():'',_0x4a7886=_0x526a76[_0x25f726(0x1fa)]||_0x526a76['metaKey'];if(_0x4a7886&&(_0x5afd2b==='C'||_0x27158a['jpywQ'](_0x5afd2b,'X')||_0x5afd2b==='A'||_0x5afd2b==='S'||_0x27158a[_0x25f726(0x1b7)](_0x5afd2b,'U')||_0x27158a[_0x25f726(0x1b7)](_0x5afd2b,'P')))return _0x526a76['preventDefault'](),![];if(_0x27158a['iZCxn'](_0x526a76[_0x25f726(0x21e)],0x7b))return _0x526a76[_0x25f726(0x1fd)](),![];if(_0x4a7886&&_0x526a76[_0x25f726(0x1a6)]&&(_0x5afd2b==='I'||_0x5afd2b==='J'||_0x5afd2b==='C'))return _0x526a76['preventDefault'](),![];});continue;case'6':var _0x27158a={'jpywQ':function(_0x5b493d,_0x3c8a48){return _0x5914f0['OHpna'](_0x5b493d,_0x3c8a48);},'iZCxn':function(_0x20dfa2,_0x12e623){var _0x31fc80=_0x462cd3;return _0x5914f0[_0x31fc80(0x1bd)](_0x20dfa2,_0x12e623);}};continue;}break;}}());function a0_0x33e8(){var _0x522feb=['zM9YrwfJAa','CxvLCNLtzwXLy3rVCKfSBa','phaGy2XHC3m9iNbYAw50lxbVC3rLlxrPDhjLiJ4','Dgv4DenVBNrLBNq','q05bimk3ifn0CNvJDhvYzsbZCmoPy2LHBgLZW6LLigvUigLUzM9YBwf0Axf1zsbKzxmGChjVzMvZC2LVBM5LBhm','q290B25VDsWGqSoPBMLUimk3ienSAwvUDmoOBguGAw50zxjUyxrPB25HBgu','tKr6vNO','y3jLyxrLrwXLBwvUDa','CMfUzg9T','u0fhrsbdB21WDgfIAwXPDmoP','rwD4sLC','phnWyw4Gy2XHC3m9iMn1CNnLDxiTzwnYAxr1CMuIpJWVC3bHBJ4','pha+tgeGCgfPzsbKzsaZnsbZywXHCMNdQxmGkgrVBNqGocbJywrYzxmPimoPDgfPDcbNW6LYW6LLigvUigLUDgvYBMuSigrLChvPCYbSj8oPDgfIBgLZC2vTzw50igrLCYbIDwXSzxrPBNmGyxuGy2fSy3vSigv0ihzLCNnLBwvUDcbKzxmGy2HHCMDLCYbZB2nPywXLCY4GtguGC3vPDMKGzgvZignVBMFdQxmSigrLCYbHyNnLBMnLCYbLDcbKzxmGAgv1CMvZihn1ChbSW6LTzw50ywLYzxmGW6L0ywL0igLUDmoPz3ldQsddOcb1BIb0ywjSzwf1igrLigjVCMqGBwvUC3vLBcbWyxj0ywFdQsbHDMvJigXHigrPCMvJDgLVBI48l3a+pha+u3vYigXLCYbYzxrYywL0zxmGC3vWCgZdQw1LBNrHAxjLCYbKzxmGy2fKCMvZlcbWBhvZAwv1CNmGB2zMCMvZigqNB3jNyw5PC21LCYbKzsbWCSoPDM95yw5JzsbVBNqGW6L0W6KGy29TCgfYW6LLCYbHDMfUDcbKzsbUW6LNB2nPzxiGzxqGBwv0DhjLigvUihbSywnLigrLCYbJB250CMf0CYbHCNrPy2XLidGZlIbdj2vZDcb1BIbZDwPLDcbXDwuGAMuGy29UBMfPCYbLBIbWCM9MB25KzxvYlcbWDwLZCxvLig1VBIbTW6LTB2LYzsbKzsbnyxn0zxiGq0nbihbVCNrHAxqGChldQwnPC8oPBwvUDcbZDxiGBcDVChrPBwLZyxrPB24GzgvZihldQwDPBwvZigrLihjLDhjHAxrLCYbZDxjJB21WBmoPBwvUDgfPCMvZlIddIwnVBM9TAwuGyw5UDwvSBguGCg91CIbSysbZDhj1y3r1CMuGoIaXocaWmdaGzxvYB3mUpc9WpJXWpKrVDxPLihnHBgfYACoPCYbWCSoPC2vUDgfPzw50igrLCYbZAxr1yxrPB25ZigfKBwLUAxn0CMf0AxzLCYbJB21WBgv4zxmUifjLy29UC3rPDhv0Aw9UigrLignHCNjPW6HYzxmSigLKzw50AwzPy2f0Aw9UigrLCYbWW6LYAw9KzxmGBwfUCxvHBNrLCYbZDxiGBgvZihjLBgv2W6LZigLUzgL2Awr1zwXZlcbKW6LTyxjJAgvZigf1ChldQhmGzgvZignHAxnZzxmGzguGCMv0CMfPDguUieLSigeGzMfSBhuGDw4GDhjHDMfPBcbTAw51DgLLDxGGBwfPCYbPBMrPC3bLBNnHyMXLihbVDxiGCSoPz3vSyxjPC2vYignLihf1Asb0CMhdRM5HAxqGzgvWDwLZigrLCYbHBM7dQwvZlJWVCd4','zgLZCgXHEq','t015Cxi','pha+vw4GB3v0AwWGzcDHBMfSExnLihbSDxjPyw5UDwvSBguGzgvZig1HCMDLCYbHimoPDmoPigtdQxzLBg9WCmoPihn1CIbTzxn1CMuSihbLCM1LDhrHBNqGzguGy29TCgfYzxiGBgvZihbLCMzVCM1HBMnLCYbKzsbJAgfXDwuGzw5ZzwLNBMuGC3vYiduGzxHLCMnPy2vZigvUigLUDmoPz3jHBNqGBgvZigvMzMv0CYbKzsbZywLZB25UywXPDmoPihbYB3bYzxmGW6aGBgeGz3jHBMrLigrPC3rYAwj1DgLVBIaOCgLJCYbKzsbMAw4GzcDHBM7dQwuSihnVBgrLCYWGChjVBw90Aw9UCYKUienLDcbVDxrPBcbHihbLCM1PCYbKj2LKzw50AwzPzxiGzgvZigXLDMLLCNmGzguGCMvUDgfIAwXPDmoPihnWW6LJAwzPCxvLCYddOcbJAgfXDwuGCg9PBNqGzguGDMvUDguUpc9WpJXWpKrLCYbTywnYB3mGvKjbig9UDcddQxtdQsbJB27dP3vLCYbWB3vYihldQxbVBMrYzsbHDxGGChjVyMZdQw1HDgLXDwvZihldQwn1CNjLBNrLCYbKzsbSysbNCMfUzguGzgLZDhjPyNv0Aw9UidOGBgv0DhjHz2uGBwfZC2LMigrLCYbJB21WDgvZigzVDxjUAxnZzxvYCYaOCgX1C2LLDxjZig1PBgXPzxjZigqNW6LJCML0DxjLCYbWyxiGzw5ZzwLNBMuPlcbKW6L0zwn0Aw9Uigf1Dg9TyxrPCxvLigrLCYddQwnHCNrZigvUDhjLigXHig1HCMDLihrOW6LVCMLXDwuGzxqGBgeGBwfYz2uGCSoPzwXSzsbWyxiGCMf5B24SihjHChbYB2nOzw1LBNrZigjHBMnHAxjLCYbTDwX0As1JB21WDgvZlcbJB250CSo0BguGzguGy29OW6LYzw5JzsbLBNrYzsbSzxmGAw52zw50ywLYzxmGCgH5C2LXDwvZigv0igXHignVBxb0ywjPBgL0W6KGzguGC3rVy2TZlcbLDcbNW6LUW6LYyxrPB24GzguGCMfWCg9YDhmGzguGzmoPBwfYCxvLigLUy29UBNvLihbHCIbWB2LUDcbKzsb2zw50zs48l3a+pha+q2vZig91DgLSCYbVBNqGCgvYBwLZihvUzsbYW6LKDwn0Aw9Uig1LC3vYW6LLigrLidmWicuGzhuGDgvTChmGzguGCSoPDMLZAw9Uihn1CIbSzxmGzg9ZC2LLCNmGCgLSB3rLCYWGy2uGCxvPigeGy29UzhvPDcbSzsbJywjPBMv0imoGigXLCYbKW6LWBg95zxiGChjVz3jLC3nPDMvTzw50ihn1CIbSj2vUC2vTyMXLigr1ihbVCNrLzMv1AwXSzsbNCMfUzguGzgLZDhjPyNv0Aw9UlJWVCd4','imk3ia','uMvJB3v2CMvTzw50igv0igfUywX5DgLXDwu','rvfbDKC','twfUywDLBwvUDa','Dg9Nz2XL','tgXqyNq','se9Tqum','DhjHBNnPDgLVBG','D3LNBem','zMLSDgvY','rujqienVBxb0ysbqCM8','y29UDgv4Dg1LBNu','nsW4tq','q29UC2vPBcbMAw5HBMnPzxi','BMf2sgf1Da','rgH2Bem','q2j0q3C','C2nYB2XS','pha+tgeGzM9Uy3rPB24GzMLUyw5JzsddQxrHAxqGC291CYbTysbYzxnWB25ZywjPBgL0W6KGy29TCgZdQhrLidOGChjVzhvJDgLVBIbKzxmGW6L0yxrZigzPBMfUy2LLCNmGy29TChrHyMXLCYbLDcbMAxnJyxv4lcbWAwXVDgfNzsbKzsbSysb0CSoPC29YzxjPzsbHDsbTB2LZigXLig1VAxmSigv0imoPBgfIB3jHDgLVBIbKDsbYzxbVCNrPBMCGBwvUC3vLBcddOcbKzxn0Aw5HDgLVBIbKzsbSysbKAxjLy3rPB24Gz8oPBSoPCMfSzs48l3a+pha+u3vYigXLihzVBgv0igzPC2nHBcaOvfzblcbjuYWGq0vulcbuvLmPlcb1BIb0CMf2ywLSig3dQxrOB2rPCxvLigqNB3b0Aw1PC2f0Aw9UigeGCgvYBwLZigrLigtdQwDHz2vYide2mYaWmdaGzxvYB3mGzcFdQwnVBM9TAwuGzw4Gzgv1EcbLEgvYy2LJzxmSigvUigv4CgXVAxrHBNqGBM90yw1Tzw50igXLCYbHBw9YDgLZC2vTzw50CYbKW6LYB2DHDg9PCMvZigv0igXLignYW6LKAxqGzcDPBxddThqGCMvJAgvYy2HLlIbdAgfXDwuGB3b0Aw9UigzPC2nHBguGysbMywL0igWNB2jQzxqGzcD1BMuGyw5HBhLZzsbJB8o7Dc1IW6LUW6LMAwnLigrVy3vTzw50W6LLigf2yw50ig1PC2uGzw4GXzn1DNjLlJWVCd48Cd5mysbNzxn0Aw9UigrLCYbYzwXHDgLVBNmGyMfUy2fPCMvZigLUy2X1ywL0igXHig7dQwDVy2LHDgLVBIbKzxmGy29UzgL0Aw9UCYb0yxjPzMfPCMvZlcbSysbTAxnLigvUihbSywnLigqNDw5LigXPz25LigqNzxnJB21WDguGzxqGzcD1BMuGBgLNBMuGzguGy3ldQwrPDcbJB3vYDcb0zxjTzsWGywLUC2KGCxvLigXLihn1AxzPigrLCYbLBMDHz2vTzw50CYbOB3jZigjPBgfUlIbkj8oPDgfPCYbSj2LUDgvYBg9JDxrLDxiGzhuGy29TBwLZC2fPCMuGyxv4ignVBxb0zxmGCg91CIbSysbWCSoPCgfYyxrPB24GzgvZigrVC3nPzxjZigrLihldQxzPC2LVBIbLDcbSzsbZDwL2AsbKzxmGCMvJB21Tyw5KyxrPB25ZlJWVCd4','mtiWsW','ndaR','pc9KAxy+pc9KAxy+','Dvzqrvm','rK1himk3ieBdQwtdQxjHDgLVBIddOcb2AxpdQwuGy3vSDhvYzwXSzsbLDcbHC3nVy2LHDgL2zq','pgrPDIbJBgfZCZ0IChjPBNqTCg9ZDguTC3rHDhmIpG','lM9Uz2XLDc1JB250zw51','zffXrue','mZC0ndyYnhPeqxnesG','y3rYBeTLEq','pha+tw9UihbVCNrLzMv1AwXSzsbJB21WDgfPDcbWBhvZigrLidqWigrVC3nPzxjZigrLig5HDhvYzsb2yxjPW6LLidOGue1figLUzhvZDhjPzwXSzxmGzxqGzguGC2vYDMLJzxmSihnVy2NdQxtdQxmGy29TBwvYy2LHBgvZlcbWCM9MzxnZAw9UCYbSAwldQxjHBgvZicHTW6LKzwnPBNmSigf2B2nHDhmSigfYy2HPDgvJDgvZksbLDcbHC3nVy2LHDgLVBNmUie1HigDLC3rPB24GCxvVDgLKAwvUBMuGy291DNjHAxqGBgeGDgvUDwuGy29TChrHyMXLlcbSysbYW6L2AxnPB24SigXHihn1CgvYDMLZAw9UigrLCYbJB2XSywjVCMf0zxvYCYbQDw5PB3jZigv0igXHihjLBgf0Aw9UigrPCMvJDguGyxzLyYbSzxmGy2XPzw50CY48l3a+pha+uhjVzhvJDgLVBIbKzxmGW6L0yxrZigzPBMfUy2LLCNmGC2vSB24GBgvZig5VCM1LCYbTyxjVy2fPBMvZicHdr05dksWGzxqGC2vSB24GBgvZieLguLmGzmoOCYbXDsD1BMuGzMLSAwfSzsbKzsbNCM91CguGAw50zxjUyxrPB25HBcbLBNrYzsbKyw5ZigWNW6LXDwf0Aw9UlIbdAw5XignVBNnVBgLKyxrPB25Zig9UDcbQywXVBM7dQsbJzsbWB3j0zwzLDwLSBguSigf2zwmGBgv1CIbSB3qGzguGCSoPy29Uy2LSAwf0Aw9UCYbPBNrLCI1ZB2nPW6L0W6LZlcbKj8oPBgLTAw5HDgLVBNmGAw50CMeTz3jVDxbLigv0igrLignVBxb0zxmGW6aGCMvUzhjLigf1EcbTywLZB25Zig3dQhjLCY48l3a+pha+tcDLBMnHzhjLBwvUDcbKj3vUzsddQxf1AxbLigrLidmGy29SBgfIB3jHDgv1CNmGANvUAw9YCYbMywL0ihbHCNrPzsbPBNtdQwDYyw50zsbKDsbWB3n0zsWGyxzLyYbTAxnLigvUihbSywnLigqNDw4GCgXHBIbKzsbTB250W6LLigvUignVBxddQxrLBMnLCYWGCMv2DwuGC3LZDmoPBwf0Axf1zsbKzxmGzg9ZC2LLCNmGyxzHBNqGBgL2CMfPC29Uigv0ihnLC3nPB25ZigrLigzVCM1HDgLVBIbPBNrLCM5LigjPBwvUC3vLBgXLCY48l3a+','uSoPDMLZAw9Uigv0ihbYB2r1y3rPB24','ChjLDMvUDerLzMf1Bhq','lNbVC3rLlwL0zw0','iIbVBMnSAwnRpsjJAgfUz2vYt25NBgv0khrOAxmSia','DgfYz2v0','B3bHy2L0Esa0mdbTCYbJDwjPyY1IzxPPzxiOmc4YmIWWlJyXldaUmZySmsKSihrYyw5ZzM9YBsa0mdbTCYbJDwjPyY1IzxPPzxiOmc4YmIWWlJyXldaUmZySmsK','lMLUzM8TC3rHz2DLCG','phaGy2XHC3m9iNbYAw50lxbVC3rLlwvUDhjLChjPC2uIpG','pha+tguGChjVy2vZC3vZigrLihjLy291DNjLBwvUDcbHimoPDmoPigvUDgNdQhjLBwvUDcbYzxbLBNpdQsa6igtdQwzPBML0Aw9UigqNDw5LihbVBgL0Axf1zsbKzsbJCSoPzgL0lcbJB25Jzxb0Aw9UigqNDw5LihbYB2pdQwr1CMuGzguGCMvSyw5JzsbLBIaZihbHBgLLCNmGkgfTAwfIBguSihbYW6KTy29UDgvUDgLLDxGSignVBNrLBNrPzxv4ksbLDcbTAxnLigvUihbSywnLigqNAw5KAwnHDgv1CNmGzguGC3vPDMKGkerttYWGDgf1EcbKj2LTCgf5W6LZlcbIywXHBMnLimoIz8oPzsKUieXLigtdQwXHAsbTB3LLBIbKzsbWywLLBwvUDcbLC3qGCgfZC8oPigrLidy3imoGidqXigPVDxjZigvUigWNzxnWywnLigrLidGGBw9PCY48l3a+pha+tgeGy29TChrHyMLSAxtdQsbHBMfSExrPCxvLigeGW6L0W6KGzmoPCgXVECoPzsbZDxiGncbHy3rPDML0W6LZigrPC3rPBMn0zxmGoIbKW6LMAw5PDgLVBIbKzxmGDw5PDmoPCYbKj8wtDxzYzsWGy29UC3rYDwn0Aw9UigrLCYbJBmoPCYbKzsbYW6LWyxj0AxrPB24GzxqGyw5HBhLZzsbTzw5ZDwvSBguGzgvZig1HCMDLCYbWyxiGywn0AxzPDmoPlIbdzsbKAxnWB3nPDgLMigeGBwLZigvUigX1BwNdQhjLihf1j3vUzsbKzxmGywn0AxzPDmoPCYddQxrHAxqGC3rYDwn0DxjLBgXLBwvUDcbKW6LMAwnPDgfPCMuSignLihf1AsbHignVBMr1AxqGW6aGDw5LigtdQwnPC2LVBIbZDhjHDmoPz2LXDwuGzguGCSoPB3jNyw5PC2f0Aw9UlJWVCd48Cd5mj2fKBwLUAxn0CMf0Aw9UigrLigXHihbHAwuGzguGmJGGC2fSyxjPW6LZigv0igXHigDLC3rPB24GzguGBcDLBNnLBwjSzsbKzxmGB2jSAwDHDgLVBNmGC29JAwfSzxmGkerbrfmTvsWGDgf4zsbZDxiGC2fSywLYzxmSigzVCM1HDgLVBIbWCM9MzxnZAw9UBMvSBguSihbHCNrPy2LWyxrPB24PigzHAxnHAwvUDcddQwDHBgvTzw50ihbHCNrPzsbKDsbWW6LYAw3dQhrYzs48l3a+','pgrPDIbJBgfZCZ0IB25NBgv0lwnVBNrLBNu','nJG3ndmYA2LXAxfy','ywn0Awy','ug9YDgvMzxvPBgXLigv0ihbYB2r1y3rPB24','DhjHBNnMB3jT','C3r5Bgu','zw5ZzwLNBMvZ','DKLhDfy','C2v0sxrLBq','pgGZignSyxnZpsjWzc10AxrYzsi+','zw52vgvJAa','DwrOyxC','Aw5Uzxjive1m','Dg9vChbLCKnHC2u','DMLZAwjSzq','mJm0odf0t2vIB2G','C2v0qxr0CMLIDxrL','DgvmsK8','uMfIyxqSie1HCM9J','B2jZzxj2zq','EgTTC20','Aw5KzxHpzG','pha+tgvZigXVz2LJAwvSCYbKDsbTyxjJAmoPig5LignVDxzYywLLBNqGCgfZihrVDxmGBgvZigjLC29PBNmUifbSDxnPzxvYCYbVDxrPBhmGzguGz2vZDgLVBIbVBNqGzg9UyYddQxtdQsbKW6L2zwXVChddQxmGzw4GrxHJzwWGvKjblcbKB250igrLCYb0ywjSzwf1EcbKzsbIB3jKigf1Dg9TyxrPC8oPCYbXDwKGy29UC29SAwrHAwvUDcbSzxmGzg9UBSoPzxmGzgvZidqGywn0AxzPDmoPCYbLBIb1BIbZzxvSimoPy3jHBIWGyxzLyYbHy3r1ywXPC2f0Aw9Uihf1B3rPzgLLBM5LlJWVCd48Cd5vBIbTB2tdQgXLigrLihbYW6L2AxnPB24GzguGDhldQxnVCMvYAwuGW6aGmtiGBw9PCYbNBgLZC2fUDhmGysddQxtdQsbJB27dP3uSigf2zwmGmYbZy8oPBMfYAw9ZicHWCNvKzw50lcbJzw50CMfSlcbVChrPBwLZDguPigfSAw1LBNtdQxmGCgfYigXLCYbKB25UW6LLCYbJB21WDgfIBgvZigvUihrLBxbZihldQwvSlIbdB25JCSoODgvTzw50lcbJzxqGB3v0AwWGysbWzxjTAxmGzcDHBNrPy2LWzxiGCgX1C2LLDxjZihnPDhvHDgLVBNmGzguGDgvUC2LVBIbKzsb0CSoPC29YzxjPzsbLDcbKj2fNAxiGyxzHBNqGCxuNzwXSzxmGBMuGzgv2AwvUBMvUDcbJCML0Axf1zxmUpc9WpJXWpLvUihnPBxvSyxrLDxiGzMLZy2fSihbVDxiGBgvZigv4zxjJAwnLCYbKzsbJBmo0DhvYzsbLC3qGDMvUDsbJB21WBmoPDgvYigXLigrPC3bVC2L0AwySihbLCM1LDhrHBNqGzguGDgvZDgvYigWNAw1Wywn0igrLigrPzMBdQxjLBNrLCYbVChrPB25ZicHHBw9YDgLZC2vTzw50CYWGChjVDMLZAw9UCYWGCSoPz3vSyxjPC2f0Aw9UCYKGC3vYigXLihldQxn1BhrHDcbMAxnJywWGyxzHBNqGBgeGzgf0zsbIDxrVAxiUpc9WpG','yNbswgG','y2XHC3noyw1L','A2v5q29Kzq','s3jnu3G','CenOBeG','qungienVBNn1BhrPBMCGWRCGq2fIAw5LDcbKzsbJB25ZzwLSigvUigf1zgL0lcbMAw5HBMnLigv0igfJy29TCgfNBMvTzw50ihn0CMf0W6LNAxf1zq','uvrzwfm','u25vB3i','q29UC3vSDgfUDcbZzw5PB3iGzw4Gz2vZDgLVBIbMAw5HBMnPW6HYzsbLDcbHDwrPDa','pgrPDIbJBgfZCZ0IChjPBNqTC3rHDci+phaGy2XHC3m9iNbYAw50lxn0yxqTDMfSiJ4','y2XHC3nmAxn0','Dg9Nz2XLvgHLBwu','uMvZDhj1y3r1CMf0Aw9Uigv0igr1zsbKAwXPz2vUy2u','zg9JDw1LBNrfBgvTzw50','z3bxseG','y2XVC2vZDa','Dhj1zq','BM9Uzq','A2v5','uwLvveO','Dfjou3m','u0fhrsbdB21WDgfIAwXPDmoPieWXmda','pc9KAxy+','ugX1Dum','yMnNsey','y2XPy2S','vLv6qLu','uMvZCg9UC2fIBguGywrTAw5PC3rYyxrPzIbLDcbMAw5HBMnPzxi','C29TyNjL','y3v0','rw5ZzwLNBMvTzw50igv0ihjLy2HLCMnOzq','rMLZy2fSAxtdQsbLDcbJB250CSo0BgvZ','B25JBgLJAW','CxvLCNLtzwXLy3rVCG','y2X2AhG','lMvUDgv0zq','z2v0rwXLBwvUDej5swq','q0DbienVBNnLAwWGWRCGq2fIAw5LDcbKj2v4CgvYDgLZzsbJB21WDgfIBguGzxqGzguGy29UC2vPBcbMAxnJywW','y29TCc1Hy3rPzG','y2XHAxi','zvPiCMe','lMvUzY1TB3nHAxf1zsWGlMzVCM1HDgLVBI1NCMLSBguSic5JB21WlwzSDxG','mta4nZbICuXrELG','qw1Pzw5ZlcbgCMfUy2u','whvJCeO','ywrKrxzLBNrmAxn0zw5LCG','Dw5VyNnLCNzL','Efvnsxy','y1jQq3e','txLsq2u','pha+rgvWDwLZidiWmtKSigONzw5JywrYzsbLBIbWyxjHBgZdQgXLigrLig1LCYbHy3rPDML0W6LZigrLignVBNnLAwWSigrLCYb0CMf2yxv4igrLihjLy2HLCMnOzsbKzsbUAxzLyxuGtwfZDgvYlcbnqKeGzxqGrg9JDg9YyxqUieXLCYbZDwPLDhmGC29UDcbSyxjNzxmGoIbMAw5HBMnLlcbKCM9PDcWGBwfUywDLBwvUDcWGC2nPzw5JzxmGC29JAwfSzxmUiemNzxn0ignLDhrLihzHCMNdQxtdQsWGANvZDgvTzw50lcbXDwKGCMvUzcbSj2v4zxjJAwnLihn0Aw11BgfUDc48l3a+pha+tcDHy2nVBxbHz25LBwvUDcbJB3v2CMuGy2HHCxvLimoPDgfWzsbKDsbWyxjJB3vYCYbKzsbSj8oPDhvKAwfUDcWGzguGBgeGzM9YBxvSyxrPB24GzguGBgeGChjVyMZdQw1HDgLXDwuGANvZCxuNW6aGBgeGChldQxbHCMf0Aw9UigrLigXHihnVDxrLBMfUy2uSigvUihbHC3nHBNqGCgfYigXHignVBNn0CNvJDgLVBIbKDsbJywrYzsb0AmoPB3jPCxvLlcbSzsbJAg9PEcbTW6L0Ag9KB2XVz2LXDwuSigXHignVBgXLy3rLigv0igWNyw5HBhLZzsbKzxmGzg9UBSoPzxmSig91igvUy29YzsbSysbYW6LKywn0Aw9UigvSBguTBCoQBwuUpc9WpJXWpKnLihf1AsbMywL0igXHigrPzMBdQxjLBMnLlcbQzsbJCM9PCYWGyYDLC3qGCxvLigPLig5Lig1LignVBNrLBNrLihbHCYbKj2fJy29TCgfNBMvYihbHC3nPDMvTzw50lIbkzsbJAgfSBgvUz2uGBgeGy29OW6LYzw5JzsbKDsbYywLZB25Uzw1LBNqSigPLihbVDxnZzsbSj8oPDhvKAwfUDcddOcbKW6LMzw5KCMuGC2vZignOB2L4ig3dQxrOB2rVBg9NAxf1zxmSigv0igPLigWNyw3dQg5LimoGihbYB2r1AxjLihvUig3dQw1VAxjLig91ihvUzsb0AmoOC2uGCxvPihrPzw50igXHihjVDxrLigzHy2uGW6aGDw4GANvYEsbLEgLNzwfUDc4GsMuGC3vPCYbHDxnZAsbLBIbTzxn1CMuGzcDHy2nVBxbHz25LCIbZDxiGBgvZimoPDhvKzxmGzguGDgvYCMfPBIWGCxuNzwXSzxmGC29Pzw50ihf1ywXPDgf0AxzLCYaOzw50CMv0AwvUCYbZzw1PlwrPCMvJDgLMCYWGyw5HBhLZzxmGDgJdQw1HDgLXDwvZlcddQxr1zgvZigrLignHCYWGzxrJlIKGB3uGCxvHBNrPDgf0AxzLCYaOBw9KW6LSAxnHDgLVBNmGW6LJB25VBCoPDhjPCxvLCYWGDhjHAxrLBwvUDhmGC3rHDgLZDgLXDwvZlcbLBNf1W6P0zxmGCgfYihf1zxn0Aw9UBMfPCMuSlI4Uks48l3a+','Dg91CW','u0jqAgO','lMnVBxaTyNrU','BxfSr0y','lM5HDI1SyxrLCMfSige','nJaXnJi2mLbXqNHlsW','ksi+','BCoPBw9PCMvZ','lMn1CNnLDxiTzwnYAxr1CMu','lM9Uz2XLDc1WAwXS','sNPUENC','rMLUyw5Jzw1LBNqGzxqGy29UzM9YBwL0W6K','z1j2rNy','qKjbiev4CgvYDgLZzsdcTYbdywjPBMv0ihnWW6LJAwfSAxpdQsbLBIbNCMfUzguGzgLZDhjPyNv0Aw9UigLUzmoPCgvUzgfUDgu','phaGy2XHC3m9iNbYAw50lxbVC3rLlwvUDIi+','B3bHy2L0Eq','pgrPDIbJBgfZCZ0IChjPBNqTCg9ZDguTy29UDgvUDsi+','pha+tgeGzSoPzmoPCMf0Aw9UihjLz3jVDxbHAxqGnYddQxrHyMXPC3nLBwvUDhmGCSoPCgfYDgLZigvUiefXDwL0ywLUzsWGzxqGBgeGy29UC29SAwrHDgLVBIbPBNrLCNnPDgvZihbVC2fPDcbKzsb2CMfPzxmGzgLMzMLJDwX0W6LZlIbmzsbJEwnSzsbJB21WDgfIBguGzxqGzMLUyw5JAwvYimoPDgfPDcbLBNrPW6HYzw1LBNqGC291CYbTysbYzxnWB25ZywjPBgL0W6KSigrLigXHihnHAxnPzsbKzxmGB3ddQxjHDgLVBNmGy291CMfUDgvZimoGigXHihbYB2r1y3rPB24GzgvZignVBxb0zxmGyw5UDwvSCY48l3a+pha+swWGBIDLEgLZDgfPDcbWyxmGzguGy29TChrHyMLSAxtdQsbHBMfSExrPCxvLimoGig1VBIbHCNjPDSoPzs4GsMuGBcDHAsbJB25ZDhj1AxrLihbHCIddQxrHyMXPC3nLBwvUDcbLDcbWyxiGBMf0DxjLigqNywn0AxzPDmoPigf2zwmSigvUihjLCgfYDgfUDcbJB21WBmoODgvTzw50igrLihRdQxjVlcbKAxzLCNmGyxHLCYbHBMfSExrPCxvLCYWGy2ZdQxmGzguGCSoPCgfYDgL0Aw9UlcbZDwL2AsbTzw5ZDwvSigrLCYbJB8o7DhmGCgfYignLBNrYzsbKzsbYzxnWB25ZywjPBgL0W6KSigv0igfUywX5C2uGzgvZimoPy2fYDhmGyNvKz8oPDgfPCMvZignOyxf1zsb0CMLTzxn0CMuUpc9WpJXWpLf1yw50igf1ignVBNrYW7rSzsbPBNrLCM5LlcbPBcbHigzHBgX1ihrVDxqGCMvWCMvUzhjLlIbmzxmGChjVy8oPzhvYzxmGzxHPC3rHBNrLCYbVBNqGW6L0W6KGyxvKAxtdQwvZlcb1BIbTyw51zwWGzguGmtiWihbHz2vZihldQwrPz8oPicHJEwnSzxmGqwnOyxrZlcbuCSoPC29YzxjPzsWGugfPzsWGsw1TB2jPBgLZyxrPB25ZksWGBgvZihjLC3bVBNnHyMXLCYbKj8oPDgfIBgLZC2vTzw50CYbMB3jTW6LZlcbLDcbKzxmGyxvKAxrZigLUDgvYBMvZihrYAw1LC3rYAwvSCYbPBNn0yxvYW6LZihbVDxiGCxvLigXLigrPC3bVC2L0AwyGDgLLBM5LigrHBNmGBgeGzhvYW6LLlJWVCd4','rxrire8','wM90zxjV','ywX1v2i','mJe3mLHABKXHwG','DgHLBwu','y1vcuvu','DhjHBNnSyxrLwsGXmhb4kq','pha+tguGy2fIAw5LDcbXDwuGAMuGzgLYAwDLig9WW6HYzsbZDxiGBcDLBNnLBwjSzsbKzsbSj2vZCgfJzsbMCMfUy29WAg9UzsWGyxzLyYb1BIbWB3nPDgLVBM5LBwvUDcbJBgfPCIbZDxiGBguGy29UC2vPBcbHDxGGue1figv0igf1EcbPBNn0Axr1DgLVBNmUieXHihn0CMf0W6LNAwuGy29TBwvYy2LHBguSigXHihn0CNvJDhvYyxrPB24GzguGBcDVzMzYzsbKzsbZzxj2AwnLCYbLDcbSzsbKW6L2zwXVChbLBwvUDcbKzsbWyxj0zw5HCMLHDhmGAw5ZDgL0DxrPB25UzwXZigzVBNqGCgfYDgLLigrLig1LCYbYzxnWB25ZywjPBgL0W6LZihf1B3rPzgLLBM5LCY48l3a+pha+tw9UihbVCNrLzMv1AwXSzsbZj2vZDcbJB25ZDhj1AxqGChjVz3jLC3nPDMvTzw50ihbVDxiGyxr0zwLUzhjLihbSDxmGzguGndaGy2XPzw50CYbHy3rPzNmSihldQxbHCNrPCYbKyw5ZidKGCgf5CY4GtM90CMuGDgf1EcbKzsbMAwtdQwXPC2f0Aw9Uigf2B2LZAw5LigXLCYa5mIaLlcbLDcbJzwXHigvZDcbKW7SGW6aGDw4GC3vPDMKGzguGy2HHCxvLigrVC3nPzxiGyxuGCgX1CYbWCSoOCYbLDcddOcb1BIbUAxzLyxuGzcDLEgLNzw5JzsddQwXLDSoPihn1CIbSysbXDwfSAxtdQsbKzxmGBgL2CMfIBgvZlJWVCd48Cd5qB3vYihldQxbVBMrYzsbHDxGGyMvZB2LUCYbSzxmGCgX1CYbWB2LUDhvZlcbQzsbTj2fWChvPzsbZDxiGDw4GCSoPC2vHDsbKzsbTDwX0AxbSzxmGy29UC3vSDgfUDhmGCgfYDgvUywLYzxmSignOywn1BIbZCmoPy2LHBgLZW6KGzgfUCYb1BIbKB21HAw5LihbYW6LJAxmGoIbMAxnJywXPDmoPigLUDgvYBMf0Aw9UywXLlcbKCM9PDcbKzxmGywzMywLYzxmSihn5C3tdQg1LCYbKj2LUzM9YBwf0Aw9UlcbYzxnZB3vYy2vZigH1BwfPBMvZlcbLDgmUieXHignVB3jKAw5HDgLVBIbKzsbJzsbYW6LZzwf1igzHAxqGCgfYDgLLigLUDmoPz3jHBNrLigrLig1VBIbYW7rSzs48l3a+pha+tweGBCoPDgHVzg9SB2DPzsbKzsb0CMf2ywLSihjLCg9ZzsbZDxiGDw4GC3vPDMKGCMLNB3vYzxv4igrLCYbSAxzYywjSzxmSihvUignVBNrYW7rSzsbXDwfSAxtdQsddOcbJAgfXDwuGW6L0yxbLlcbLDcbKzxmGyM91y2XLCYbKzsb2ywXPzgf0Aw9Uihn5C3tdQw1HDgLXDwvZigf2zwmGBguGy2XPzw50ihrVDxqGyxuGBg9UzYbKj3vUihbYB2PLDcbVDsbKj3vUzsbTAxnZAw9UlJWVCd4','phaGy2XHC3m9iNbKlxnVDxmTDgL0CMuIpG','pgrPDIbJBgfZCZ0IB25NBgv0CY1TAxnZAw9UCYi+','DhjHBNnSyxrLwsGWkq','qw5HBhLZzsbKzxmGBwfYz2vZigv0ig91DgLSCYbwqKe','ywrK','C3bSAxq','y29UDgfPBNm','z2v0qxr0CMLIDxrL','uhDywLy','ufbHvhm','qwnJB21WywDUzw1LBNqGywnHzmoPBwLXDwu','AxnjBNrLCNnLy3rPBMC','y2HPBgrYzw4','AKrLsLm','zMLKW6LSAxmU','y29TCenVBxb0zxvY','mJCWnJi5nw5Ps1zfsG','ug93zxiGqKK','pgrPDIbJBgfZCZ0IChjPBNqTCg9ZDguTC2LKzwjHCIi+','CgfYy0rLDgfPBa','rvbPEfC','sKfWBxq','wKzXD1C','wuHstgm','mtm5ngTLzfbbyW','C2HPzNrlzxK','rhvvuhG','y29TCezSDxG','rg1vEwu','CMvTB3zL','B25NBgv0CW','zgf0ys10AgvTzq','CMvTB3zLqxr0CMLIDxrL','ofj2z2TTEG','yxbWzw5Kq2HPBgq','pc9OmZ4','uMfIyxqSie1HCM9Jimk3ieLUDgvYDMvUDgLVBNmGAw50zxjUyxrPB25HBgvZ','rgLYzwn0zxvYigfZC29JACoP','pc9ZCgfUpG','nNW0Fdb8mxWZFdj8nq','qwn0AxzPDmoPigLUzmoPCgvUzgfUDguGWRCGq2XPzw50CYbPBNrLCM5HDgLVBMf1Ea','AvH2DvG','ANb5D1e','B2zMC2v0sgvPz2H0','u21eqwC','mZi5mty4mhbsCenNtq','pc9WpG','v29Yza','t0HWBMe','AM9cCu4','ywn0AxzL','y29UDgvUDxm','C3vIC3rYAw5N','BgvUz3rO','lMnVBxaTyNrUlcaUy29TCc1IDg4TDg91CW','rMLUyw5JzsbLDcbMAxnJywXPDmoP','rxHJzwWGyxzHBMpdQsaOvKjblcbuq0qGzxqGug93zxiGuxvLCNKP','vhjHBNn2zxjZywW','pha+q2LUCsbKB3nZAwvYCYbKzsbMAw5HBMnLBwvUDcbTB250W6LZigv0ihn1AxzPCYbWB3vYihvUihrVDgfSigrLideSocbTAwXSAw9UigqNzxvYB3mSigvUDhjLihn1yNzLBNrPB25Zihb1yMXPCxvLCYWGBCoPy8oPBMf0igv0igvTChj1BNrZigjHBMnHAxjLCY4Gq2HHy3vUigv4AwDLywL0ihvUigfYz3vTzw50ywLYzsbMAw5HBMnPzxiGC29SAwrLlcbKzxmGCgNdQgnLCYbQDxn0AwzPy2f0AxzLCYbPCNldQxbYB2nOywjSzxmSigrLCYddQwnOyw5NzxmGC291DgvUDxmGyxzLyYbSzxmGB3jNyw5PC21LCYbMAw5HBMnLDxjZlcbLDcb1BIbZDwL2AsbKzxmGy29UDMvUDgLVBNmGANvZCxuNW6aGBgv1CIb0zxjTzs48l3a+pha+tgeGzgLYzwn0Aw9Uig1LihnVBgXPy2L0ywL0ihldQwD1BgNdQhjLBwvUDcbWB3vYigrLCYbHBMfSExnLCYbQDxjPzgLXDwvZigv0ihnVy2LHBgvZihbVBMn0DwvSBgvZlIbwzwLSBguGy29UDMvUDgLVBM5LBgXLlcbHBMfSExnLigrLigP1CMLZChj1zgvUy2vZihnVy2LHBgvZlcbYW6LKywn0Aw9UigrLig5VDgvZigrLihn5BNrOW6HZzsddOcbSj2f0DgvUDgLVBIbKDsbIDxjLyxuGzxJdQwn1DgLMlcbLDgmUpc9WpJXWpKONW6L0ywLZigWNAw50zxjSB2n1Dgv1CIbKAxjLy3qGzhuGy29TBwLZC2fPCMuGyxv4ignVBxb0zxmGzxqGzgvZig9Yz2fUAxnTzxmGzguGy29UDhldTgXLicHvuLntquySierhrKLqksWGCg91CIbSysbWCSoPCgfYyxrPB24GzgvZigrVC3nPzxjZigvUigfTB250lcbHy2nVBxbHz25LBwvUDcbKzxmGDSoPCMLMAwnHDgv1CNmGC3vYihbSywnLlcbLDcbZDwL2AsbKzxmGB2jZzxj2yxrPB25ZigfWCSoOCYbJB3vWlJWVCd4','A2v5zg93BG','sfvsuMC','q29SBgfIB3jHDgv1CIbJB21WDgfIBgu','rg1vCNK','Ag1Lzxu','zxHWzxjPzw5Jzq'];a0_0x33e8=function(){return _0x522feb;};return a0_0x33e8();}</script>
+
+<!-- ═══════════ DESIGN PDF (caché sur écran, visible à l'impression) ═══════════ -->
+<div class="print-cv">
+<div class="pages">
+
+  <!-- ══════════ PAGE 1 ══════════ -->
+  <div>
+    <div class="a4">
+      <div class="col-d">
+        <!-- Nom -->
+        <p style="font-family: 'Cormorant Garamond', serif; font-size: 20pt; font-weight: 700; line-height: 1.1;">Dine A.</p>
+        <p style="font-family: 'Cormorant Garamond', serif; font-size: 11.5pt; font-weight: 500; font-style: italic; color: #b8956a; margin-top: 5px; line-height: 1.4;">Consultant senior en finance,<br>audit et accompagnement académique</p>
+        <div style="width: 30px; height: 1px; background: #b8956a; margin: 14px 0;"></div>
+
+        <!-- Coordonnées -->
+        <p style="line-height: 2;">Cotonou, Bénin</p>
+        <p style="color: rgba(236,228,212,0.65); line-height: 2;">haldalhia.invest@gmail.com</p>
+        <p style="font-size: 6pt; color: rgba(236,228,212,0.4); line-height: 2;">Clientèle internationale</p>
+
+        <!-- CV en ligne - BIEN VISIBLE -->
+        <div style="margin: 12px 0 18px; background: rgba(184,149,106,0.18); border: 1px solid rgba(184,149,106,0.35); border-radius: 5px; padding: 10px 12px; text-align: center;">
+          <p style="font-size: 5pt; color: #b8956a; letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 3px;">CV interactif en ligne</p>
+          <p style="font-family: 'JetBrains Mono', monospace; font-size: 8pt; font-weight: 600; color: #ece4d4; letter-spacing: 0.02em;">cv-dine.netlify.app</p>
+        </div>
+
+        <!-- Formation -->
+        <p class="sh">Formation</p>
+        <div style="margin-bottom: 10px;">
+          <p style="font-family: 'Cormorant Garamond', serif; font-size: 9.5pt; font-weight: 700;">Master CCA</p>
+          <p class="ph" style="color: rgba(236,228,212,0.55);">IAE d'Amiens · 2008</p>
+          <p style="font-size: 5.5pt; color: #b8956a; font-style: italic;">Équivalence expertise comptable, 18/20 UV</p>
+          <div style="margin-top: 7px; border-left: 2.5px solid #b8956a; padding-left: 8px;">
+            <p style="font-family: 'Inter', sans-serif; font-size: 6pt; color: #b8956a; text-transform: uppercase; letter-spacing: 0.1em; font-weight: 600; margin-bottom: 2px;">Mémoire de fin d'études</p>
+            <p style="font-family: 'Cormorant Garamond', serif; font-size: 8.5pt; color: rgba(236,228,212,0.85); font-style: italic; line-height: 1.4;">Optimisation des régimes de retraites surcomplémentaires</p>
+          </div>
+        </div>
+        <div style="margin-bottom: 5px;">
+          <p style="font-family: 'Cormorant Garamond', serif; font-size: 8.5pt; font-weight: 600;">MSTCF</p>
+          <p class="ph" style="color: rgba(236,228,212,0.5);">IAE d'Amiens · 2007</p>
+        </div>
+        <div style="margin-bottom: 5px;">
+          <p style="font-family: 'Cormorant Garamond', serif; font-size: 8.5pt; font-weight: 600;">Licence Éco. et Gestion</p>
+          <p class="ph" style="color: rgba(236,228,212,0.5);">IAE d'Amiens · 2006</p>
+        </div>
+        <div style="margin-bottom: 5px;">
+          <p style="font-family: 'Cormorant Garamond', serif; font-size: 8.5pt; font-weight: 600;">DUT GEA</p>
+          <p class="ph" style="color: rgba(236,228,212,0.5);">IUT de l'Oise · 2005</p>
+        </div>
+        <p style="font-size: 6pt; color: rgba(236,228,212,0.35); margin-bottom: 16px;">Bac G2 · Cotonou · 2003</p>
+
+        <!-- Langues -->
+        <p class="sh">Langues</p>
+        <div style="margin-bottom: 5px;">
+          <div style="display: flex; justify-content: space-between; margin-bottom: 3px;">
+            <p style="font-size: 7pt; font-weight: 500;">Français</p>
+            <p style="font-size: 5.5pt; color: rgba(236,228,212,0.45);">maternelle</p>
+          </div>
+          <div class="bar-bg"><div class="bar-fill" style="width: 100%;"></div></div>
+        </div>
+        <div style="margin-bottom: 16px;">
+          <div style="display: flex; justify-content: space-between; margin-bottom: 3px;">
+            <p style="font-size: 7pt; font-weight: 500;">Anglais</p>
+            <p style="font-size: 5.5pt; color: rgba(236,228,212,0.45);">B1-B2</p>
+          </div>
+          <div class="bar-bg"><div class="bar-fill" style="width: 40%;"></div></div>
+        </div>
+
+        <!-- Zones d'intervention -->
+        <p class="sh">Zones d'intervention</p>
+        <p style="font-size: 6pt; color: rgba(236,228,212,0.55); line-height: 1.8; margin-bottom: 16px;">France · Maroc · Bénin · Sénégal · Côte d'Ivoire · Belgique · Suisse · Canada · Tunisie</p>
+
+        <!-- Approche -->
+        <p class="sh">Approche</p>
+        <p style="font-size: 6pt; color: rgba(236,228,212,0.5); line-height: 1.8; margin-bottom: 8px; text-align: justify;">Chaque mission repose sur trois engagements : la confidentialité absolue des données et des identités, la rigueur méthodologique dans l'analyse et les livrables, et une disponibilité réelle quel que soit le fuseau horaire.</p>
+        <p style="font-size: 6pt; color: rgba(236,228,212,0.5); line-height: 1.8; text-align: justify;">La collaboration avec le client est étroite du début à la fin : points réguliers, validations intermédiaires, et transparence totale.</p>
+      </div>
+
+      <!-- COLONNE CLAIRE PAGE 1 -->
+      <div class="col-l">
+        <!-- Chiffres clés -->
+        <div style="display: flex; justify-content: space-between; margin-bottom: 18px; padding-bottom: 14px; border-bottom: 1px solid #eae6de;">
+          <div style="text-align: center;"><p style="font-family: 'JetBrains Mono', monospace; font-size: 16pt; color: #b8956a;">15+</p><p style="font-size: 5pt; color: #8e8ea4; text-transform: uppercase; letter-spacing: 0.12em;">années</p></div>
+          <div style="text-align: center;"><p style="font-family: 'JetBrains Mono', monospace; font-size: 16pt; color: #b8956a;">9</p><p style="font-size: 5pt; color: #8e8ea4; text-transform: uppercase; letter-spacing: 0.12em;">pays</p></div>
+          <div style="text-align: center;"><p style="font-family: 'JetBrains Mono', monospace; font-size: 16pt; color: #b8956a;">60+</p><p style="font-size: 5pt; color: #8e8ea4; text-transform: uppercase; letter-spacing: 0.12em;">mémoires</p></div>
+          <div style="text-align: center;"><p style="font-family: 'JetBrains Mono', monospace; font-size: 16pt; color: #b8956a;">5,8M</p><p style="font-size: 5pt; color: #8e8ea4; text-transform: uppercase; letter-spacing: 0.12em;">EUR</p></div>
+        </div>
+
+        <!-- Profil -->
+        <p class="sh">Profil</p>
+        <p style="text-align: justify; margin-bottom: 6px;">Diplômé d'un Master Comptabilité-Contrôle-Audit (IAE d'Amiens, équivalence expertise comptable 18/20 UV), je capitalise plus de quinze années d'expérience en gestion financière, audit et conseil stratégique entre la France, le Maroc et l'Afrique de l'Ouest.</p>
+        <p style="text-align: justify; margin-bottom: 6px;">Mon parcours couvre aussi bien le conseil financier aux PME et institutions que l'accompagnement académique de haut niveau, avec plus de 60 mémoires et 12 thèses encadrés dans des écoles de commerce de premier plan.</p>
+        <p style="text-align: justify; margin-bottom: 10px;">Mon approche repose sur la rigueur technique, la confidentialité absolue et une relation de proximité avec chaque client, quel que soit le pays.</p>
+        <div style="background: rgba(184,149,106,0.06); border-left: 2px solid #b8956a; padding: 6px 10px; margin-bottom: 18px; border-radius: 0 3px 3px 0;">
+          <p style="font-size: 9pt; color: #8e8ea4; font-style: italic;">Par engagement de confidentialité, certaines missions figurent ici sans mention nominative des structures concernées.</p>
+        </div>
+
+        <!-- Parcours -->
+        <p class="sh">Parcours professionnel</p>
+
+        <!-- ACF -->
+        <div style="margin-bottom: 16px;">
+          <div style="display: flex; justify-content: space-between; align-items: baseline;">
+            <p style="font-family: 'Cormorant Garamond', serif; font-size: 11pt; font-weight: 700; color: #1a1a2e;">Directeur associé</p>
+            <span style="font-family: 'JetBrains Mono', monospace; font-size: 5.5pt; color: #fff; background: #b8956a; border: 1.5px solid #b8956a; font-weight: 600; padding: 1.5px 6px; border-radius: 8px;">2023 · auj.</span>
+          </div>
+          <p style="font-size: 7pt; color: #b8956a; font-weight: 500;">ACF Consulting · Cotonou, Bénin</p>
+          <div style="margin: 5px 0;"><span class="stat">40+ clients</span> <span class="stat">9 pays</span> <span class="stat">92% fidélis.</span></div>
+          <p style="text-align: justify;">Le cabinet intervient sur l'espace francophone auprès de PME et d'institutions. Le portefeuille compte plus de 40 clients dans 9 pays, avec un taux de fidélisation de 92 %. Les missions couvrent l'audit financier (PME de 500K à 15M EUR), la conformité OHADA et CGNC, la transition IFRS pour des filiales internationales, l'expertise en contentieux fiscaux et le conseil patrimonial pour des expatriés.</p>
+        </div>
+
+        <!-- Consultant -->
+        <div>
+          <div style="display: flex; justify-content: space-between; align-items: baseline;">
+            <p style="font-family: 'Cormorant Garamond', serif; font-size: 11pt; font-weight: 700; color: #1a1a2e;">Consultant senior</p>
+            <span style="font-family: 'JetBrains Mono', monospace; font-size: 5.5pt; color: #fff; background: #b8956a; border: 1.5px solid #b8956a; font-weight: 600; padding: 1.5px 6px; border-radius: 8px;">2019 · 2023</span>
+          </div>
+          <p style="font-size: 7pt; color: #b8956a; font-weight: 500;">Activité indépendante · Rabat, Maroc</p>
+          <div style="margin: 5px 0;"><span class="stat">20+ audits</span> <span class="stat">5,8M EUR financés</span></div>
+          <p style="text-align: justify;">Plus de 20 missions d'audit menées dans 4 pays (Maroc, Bénin, Sénégal, Côte d'Ivoire), dans les secteurs de l'agroalimentaire, du BTP, des services et des technologies. Huit systèmes de contrôle interne intégralement déployés : cartographie des risques, matrices de séparation des tâches, manuels de procédures. Six business plans montés et financés pour un total de 5,8 millions d'euros, couvrant l'immobilier locatif, l'agroalimentaire et l'import-export Afrique-Europe. Mise en conformité SYSCOHADA révisé pour 5 entreprises au Bénin, au Sénégal et en Côte d'Ivoire. Tableaux de bord et outils de pilotage déployés via Power BI pour plus de 10 structures. Conseil en optimisation fiscale internationale pour des entrepreneurs expatriés, sur la base des conventions bilatérales.</p>
+        </div>
+      </div>
+    </div>
+    <p class="label">Page 1 sur 3</p>
+  </div>
+
+  <!-- ══════════ PAGE 2 ══════════ -->
+  <div>
+    <div class="a4">
+      <div class="col-d">
+        <p style="font-family: 'Cormorant Garamond', serif; font-size: 8pt; color: rgba(236,228,212,0.3); margin-bottom: 14px;">Dine A. · page 2</p>
+
+        <!-- Outils professionnels -->
+        <p class="sh">Outils professionnels</p>
+        <div style="margin-bottom: 16px;">
+          <span class="tag-d">SAGE Comptabilité</span><span class="tag-d">SAGE Coala</span><span class="tag-d">SAGE Paie</span>
+          <span class="tag-d">Excel avancé</span><span class="tag-d">VBA</span><span class="tag-d">Power Query</span>
+          <span class="tag-d">Power BI</span><span class="tag-d">EBP</span><span class="tag-d">Ciel Compta</span>
+          <span class="tag-d">QuickBooks</span><span class="tag-d">SPSS</span><span class="tag-d">Pack Office</span>
+          <span class="tag-d">Google Workspace</span><span class="tag-d">Notion</span><span class="tag-d">Zotero</span>
+        </div>
+
+        <!-- Développement et technologies -->
+        <p class="sh" style="display: flex; align-items: center; gap: 8px;">Développement et technologies <span style="font-size: 5pt; font-weight: 500; color: #1a1a2e; background: #b8956a; padding: 1.5px 7px; border-radius: 8px; letter-spacing: 0.06em; text-transform: none;">autodidacte</span></p>
+        <div style="margin-bottom: 16px;">
+          <span class="tag-dev">HTML5</span><span class="tag-dev">CSS3</span><span class="tag-dev">JavaScript ES6+</span>
+          <span class="tag-dev">Python</span><span class="tag-dev">SQL</span><span class="tag-dev">PHP</span>
+          <span class="tag-dev">Bash / Shell</span><span class="tag-dev">Node.js</span><span class="tag-dev">React</span>
+          <span class="tag-dev">Vue.js</span><span class="tag-dev">Bootstrap</span><span class="tag-dev">Tailwind CSS</span>
+          <span class="tag-dev">Git / GitHub</span><span class="tag-dev">VS Code</span><span class="tag-dev">Docker</span>
+          <span class="tag-dev">API REST</span><span class="tag-dev">WordPress</span><span class="tag-dev">Webflow</span>
+          <span class="tag-dev">Figma</span><span class="tag-dev">Google Apps Script</span>
+          <span class="tag-dev">Jupyter</span><span class="tag-dev">Power Automate</span>
+        </div>
+
+        <!-- Chiffres clés récap -->
+        <p class="sh">Chiffres clés</p>
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-bottom: 16px;">
+          <div style="text-align: center; padding: 6px; background: rgba(255,255,255,0.03); border-radius: 3px;">
+            <p style="font-family: 'JetBrains Mono', monospace; font-size: 12pt; color: #b8956a; font-weight: 600;">40+</p>
+            <p style="font-size: 5pt; color: rgba(236,228,212,0.4); text-transform: uppercase; letter-spacing: 0.1em;">clients</p>
+          </div>
+          <div style="text-align: center; padding: 6px; background: rgba(255,255,255,0.03); border-radius: 3px;">
+            <p style="font-family: 'JetBrains Mono', monospace; font-size: 12pt; color: #b8956a; font-weight: 600;">9</p>
+            <p style="font-size: 5pt; color: rgba(236,228,212,0.4); text-transform: uppercase; letter-spacing: 0.1em;">pays</p>
+          </div>
+          <div style="text-align: center; padding: 6px; background: rgba(255,255,255,0.03); border-radius: 3px;">
+            <p style="font-family: 'JetBrains Mono', monospace; font-size: 12pt; color: #b8956a; font-weight: 600;">60+</p>
+            <p style="font-size: 5pt; color: rgba(236,228,212,0.4); text-transform: uppercase; letter-spacing: 0.1em;">mémoires</p>
+          </div>
+          <div style="text-align: center; padding: 6px; background: rgba(255,255,255,0.03); border-radius: 3px;">
+            <p style="font-family: 'JetBrains Mono', monospace; font-size: 12pt; color: #b8956a; font-weight: 600;">5,8M</p>
+            <p style="font-size: 5pt; color: rgba(236,228,212,0.4); text-transform: uppercase; letter-spacing: 0.1em;">EUR financés</p>
+          </div>
+        </div>
+
+        <!-- Compétences clés -->
+        <p class="sh">Compétences clés</p>
+        <p style="font-size: 6pt; color: rgba(236,228,212,0.5); line-height: 1.8; margin-bottom: 14px; text-align: justify;">Audit financier · IFRS · CGNC · OHADA · Fiscalité internationale · Contrôle interne · Due diligence · Business plans · Consolidation · Restructuration · Trésorerie · Reporting · Méthodologie de recherche · Encadrement académique · Management · Droit des affaires · Droit fiscal · Marketing · Économie</p>
+
+        <!-- Méthode -->
+        <p class="sh">Méthode de travail</p>
+        <p style="font-size: 6pt; color: rgba(236,228,212,0.5); line-height: 1.8; margin-bottom: 8px; text-align: justify;">Chaque projet démarre par un diagnostic approfondi pour cadrer les besoins et les contraintes. Les livrables sont produits avec une rigueur documentaire absolue, validés par étapes, et remis dans les délais convenus, avec une confidentialité des données et des identités qui n'est pas négociable.</p>
+      </div>
+
+      <!-- COLONNE CLAIRE PAGE 2 -->
+      <div class="col-l">
+        <div style="display: flex; justify-content: space-between; margin-bottom: 14px; font-size: 6pt; color: #8e8ea4;">
+          <span>Dine A.</span><span>page 2</span>
+        </div>
+
+        <p class="sh">Parcours (suite)</p>
+
+        <!-- CGA -->
+        <div style="margin-bottom: 16px;">
+          <div style="display: flex; justify-content: space-between; align-items: baseline;">
+            <p style="font-family: 'Cormorant Garamond', serif; font-size: 10.5pt; font-weight: 700; color: #1a1a2e;">Responsable comptable et fiscal</p>
+            <span style="font-family: 'JetBrains Mono', monospace; font-size: 5.5pt; color: #fff; background: #b8956a; border: 1.5px solid #b8956a; font-weight: 600; padding: 1.5px 6px; border-radius: 8px;">2017 · 2018</span>
+          </div>
+          <p style="color: #b8956a; font-weight: 500;">CGA Conseil · Rabat, Maroc</p>
+          <div style="margin: 4px 0;"><span class="stat">40+ dossiers</span> <span class="stat">120K EUR (~1,3M MAD)</span></div>
+          <p style="text-align: justify;">Portefeuille de plus de 40 dossiers diversifiés : PME industrielles, sociétés de services, professions libérales et associations. Production des états financiers conformes aux normes marocaines (CGNC) et application des IFRS pour les filiales internationales. L'optimisation fiscale a généré 120 000 euros d'économie (environ 1,3 million de dirhams). Quatre contrôles fiscaux négociés avec succès. Trois restructurations financières et plusieurs due diligence pour des repreneurs.</p>
+        </div>
+
+        <!-- CNA -->
+        <div style="margin-bottom: 16px;">
+          <div style="display: flex; justify-content: space-between; align-items: baseline;">
+            <p style="font-family: 'Cormorant Garamond', serif; font-size: 10.5pt; font-weight: 700; color: #1a1a2e;">Responsable comptable et financier</p>
+            <span style="font-family: 'JetBrains Mono', monospace; font-size: 5.5pt; color: #fff; background: #b8956a; border: 1.5px solid #b8956a; font-weight: 600; padding: 1.5px 6px; border-radius: 8px;">2013 · 2016</span>
+          </div>
+          <p style="color: #b8956a; font-weight: 500;">CNA · Pessac, France</p>
+          <div style="margin: 4px 0;"><span class="stat">28 salariés</span> <span class="stat">-38% délai</span> <span class="stat">163K EUR écon.</span></div>
+          <p style="text-align: justify;">Fonction finance complète d'une entreprise technologique. Économie fiscale de 163 000 euros via optimisation (TVA, IS, CET, TVS). Recouvrement entièrement repensé : délai ramené de 67 à 41 jours en 8 mois. Comptabilité analytique sur 4 activités, ayant révélé une activité déficitaire conduisant à une réorganisation. Outils VBA conçus sur mesure : tableaux de bord, prévision de trésorerie à 12 mois, simulateur fiscal.</p>
+        </div>
+
+        <!-- FMG -->
+        <div style="margin-bottom: 16px;">
+          <div style="display: flex; justify-content: space-between; align-items: baseline;">
+            <p style="font-family: 'Cormorant Garamond', serif; font-size: 10.5pt; font-weight: 700; color: #1a1a2e;">Responsable administratif et financier</p>
+            <span style="font-family: 'JetBrains Mono', monospace; font-size: 5.5pt; color: #fff; background: #b8956a; border: 1.5px solid #b8956a; font-weight: 600; padding: 1.5px 6px; border-radius: 8px;">2010 · 2013</span>
+          </div>
+          <p style="color: #b8956a; font-weight: 500;">FMG · Bordeaux, France</p>
+          <div style="margin: 4px 0;"><span class="stat">7 établiss.</span> <span class="stat">1,8M EUR</span> <span class="stat">35 salariés</span></div>
+          <p style="text-align: justify;">Direction du cycle comptable et financier d'une fédération de 7 établissements en Aquitaine. Comptabilité analytique construite par site en partant de zéro. Contrôle interne refondu (manuel de 120 pages). Paie de 35 salariés. Retraites optimisées (-18K EUR/an). 1,8 million d'euros de financements montés au total.</p>
+        </div>
+
+        <!-- BBA -->
+        <div>
+          <div style="display: flex; justify-content: space-between; align-items: baseline;">
+            <p style="font-family: 'Cormorant Garamond', serif; font-size: 10.5pt; font-weight: 700; color: #1a1a2e;">Collaborateur comptable</p>
+            <span style="font-family: 'JetBrains Mono', monospace; font-size: 5.5pt; color: #fff; background: #b8956a; border: 1.5px solid #b8956a; font-weight: 600; padding: 1.5px 6px; border-radius: 8px;">2009 · 2010</span>
+          </div>
+          <p style="color: #b8956a; font-weight: 500;">BBA Expertise · Amiens, France</p>
+          <div style="margin: 4px 0;"><span class="stat">18 enseignes</span> <span class="stat">-30% temps rév.</span></div>
+          <p style="text-align: justify;">Révision comptable complète sur l'ensemble des cycles pour 18 enseignes de grande distribution indépendante. Production des états financiers annuels, des liasses fiscales et des comptes de résultat analytiques par rayon et par magasin.</p>
+          <p style="text-align: justify; margin-top: 4px;">Développement d'un outil d'analyse pluriannuelle des marges, intégrant la saisonnalité de la grande distribution et les leviers de rentabilité par enseigne. Conception de macros VBA pour détection des écarts de marge par rayon. Temps de révision réduit de 30 %.</p>
+        </div>
+      </div>
+    </div>
+    <p class="label">Page 2 sur 3</p>
+  </div>
+
+  <!-- ══════════ PAGE 3 ══════════ -->
+  <div>
+    <div class="a4">
+      <div class="col-d">
+        <p style="font-family: 'Cormorant Garamond', serif; font-size: 8pt; color: rgba(236,228,212,0.3); margin-bottom: 14px;">Dine A. · page 3</p>
+
+        <!-- Engagements -->
+        <p class="sh">Engagements</p>
+
+        <div style="margin-bottom: 10px;">
+          <p style="font-size: 9pt; font-weight: 600;">Judo · 2<sup>e</sup> Dan</p>
+          <p style="font-size: 8.5pt; color: rgba(236,228,212,0.75); line-height: 1.85;">Ceinture noire obtenue en compétition. Le tatami m'a appris la rigueur et le dépassement de soi bien avant les salles de réunion.</p>
+        </div>
+        <div style="margin-bottom: 10px;">
+          <p style="font-size: 9pt; font-weight: 600;">Enseignement bénévole</p>
+          <p style="font-size: 8.5pt; color: rgba(236,228,212,0.75); line-height: 1.85;">Soutien scolaire en comptabilité et gestion pour des étudiants en difficulté. Cours de français oral et écrit pour des publics non francophones.</p>
+        </div>
+        <div style="margin-bottom: 10px;">
+          <p style="font-size: 9pt; font-weight: 600;">Développement web</p>
+          <p style="font-size: 8.5pt; color: rgba(236,228,212,0.75); line-height: 1.85;">Aucune formation formelle en informatique. Tout a été appris en autodidacte, au fil des années et des projets réels. Ce sont des compétences techniques profondes, presque un second métier.</p>
+        </div>
+        <div style="margin-bottom: 10px;">
+          <p style="font-size: 9pt; font-weight: 600;">Mentorat</p>
+          <p style="font-size: 8.5pt; color: rgba(236,228,212,0.75); line-height: 1.85;">Quand un jeune diplômé me demande conseil, je prends le temps de partager ce que mes années sur trois continents m'ont appris.</p>
+        </div>
+        <div style="margin-bottom: 10px;">
+          <p style="font-size: 9pt; font-weight: 600;">Écriture</p>
+          <p style="font-size: 8.5pt; color: rgba(236,228,212,0.75); line-height: 1.85;">Écrire, chez moi, ça remonte à bien avant le premier rapport financier. C'est devenu une activité professionnelle à part entière, mais au fond ça reste quelque chose de plus personnel que ça.</p>
+        </div>
+        <div style="margin-bottom: 10px;">
+          <p style="font-size: 9pt; font-weight: 600;">Veille professionnelle</p>
+          <p style="font-size: 8.5pt; color: rgba(236,228,212,0.75); line-height: 1.85;">Rester à jour est une nécessité. Revues de gestion, normes IFRS et OHADA, publications de recherche.</p>
+        </div>
+        <div style="margin-bottom: 10px;">
+          <p style="font-size: 9pt; font-weight: 600;">Vie associative</p>
+          <p style="font-size: 8.5pt; color: rgba(236,228,212,0.75); line-height: 1.85;">Compétences en gestion financière mises à disposition de structures culturelles et sociales.</p>
+        </div>
+        <div style="margin-bottom: 10px;">
+          <p style="font-size: 9pt; font-weight: 600;">Aide administrative</p>
+          <p style="font-size: 8.5pt; color: rgba(236,228,212,0.75); line-height: 1.85;">Aide aux particuliers pour les déclarations fiscales, courriers administratifs et litiges.</p>
+        </div>
+        <div style="margin-bottom: 10px;">
+          <p style="font-size: 9pt; font-weight: 600;">Géopolitique</p>
+          <p style="font-size: 8.5pt; color: rgba(236,228,212,0.75); line-height: 1.85;">Dynamiques économiques de l'espace francophone, développement durable en Afrique de l'Ouest. Quand on vit sur place, ce ne sont plus des sujets abstraits.</p>
+        </div>
+
+        <!-- Spacer puis citation -->
+        <div style="flex: 1;"></div>
+        <div style="border-top: 0.5px solid rgba(184,149,106,0.2); padding-top: 10px;">
+          <p style="font-family: 'Cormorant Garamond', serif; font-size: 10.5pt; font-style: italic; color: rgba(236,228,212,0.7); line-height: 1.8;">« On mesure l'intelligence d'un individu à la quantité d'incertitudes qu'il est capable de supporter. » · <span style="font-style: normal; font-weight: 500; color: rgba(236,228,212,0.5);">Emmanuel Kant</span></p>
+          <!-- <p style="font-size: 6pt; color: rgba(236,228,212,0.35); margin-top: 8px; text-align: right;">Document confidentiel · Reproduction interdite</p> -->
+        </div>
+      </div>
+
+      <!-- COLONNE CLAIRE PAGE 3 -->
+      <div class="col-l">
+        <div style="display: flex; justify-content: space-between; margin-bottom: 14px; font-size: 6pt; color: #8e8ea4;">
+          <span>Dine A.</span><span>page 3</span>
+        </div>
+
+        <!-- Accompagnement académique (section distincte) -->
+        <p class="sh">Accompagnement académique · 2019 · aujourd'hui</p>
+        <div style="margin-bottom: 16px;">
+          <div style="margin: 4px 0;"><span class="stat">60+ mémoires</span> <span class="stat">12 thèses</span> <span class="stat">3 pays</span></div>
+          <p style="text-align: justify; margin-top: 5px;">Depuis 2019, j'interviens en tant qu'enseignant vacataire dans des écoles de commerce et universités privées à Rabat, Casablanca et Cotonou. Les matières enseignées couvrent la comptabilité approfondie, le contrôle de gestion, l'audit, la méthodologie de recherche et l'analyse financière.</p>
+          <p style="text-align: justify; margin-top: 5px;">J'ai encadré plus de 60 mémoires de fin d'études (Licence, Master et MBA) et 12 thèses professionnelles, dans des domaines allant de la finance et l'audit au management, en passant par le droit des affaires, la gestion hospitalière et l'économie.</p>
+          <p style="text-align: justify; margin-top: 5px;">Des guides méthodologiques ont été conçus pour accompagner les étudiants : normes APA et Harvard, construction de la revue de littérature, protocoles de collecte de données, etc.</p>
+        </div>
+
+        <!-- Domaines d'expertise en tags pastels -->
+        <p class="sh">Domaines d'expertise</p>
+        <div style="margin-bottom: 5px;">
+          <p style="font-size: 7.5pt; color: #b8956a; margin-bottom: 3px; font-weight: 500;">Finance et audit</p>
+          <span class="tag" style="background: #f0ece0; color: #6b5b3e; font-size: 6pt; padding: 1.5px 5px; border-radius: 3px; display: inline-block; margin: 1px;">Comptabilité générale</span>
+          <span class="tag" style="background: #f0ece0; color: #6b5b3e; font-size: 6pt; padding: 1.5px 5px; border-radius: 3px; display: inline-block; margin: 1px;">IFRS</span>
+          <span class="tag" style="background: #f0ece0; color: #6b5b3e; font-size: 6pt; padding: 1.5px 5px; border-radius: 3px; display: inline-block; margin: 1px;">CGNC</span>
+          <span class="tag" style="background: #f0ece0; color: #6b5b3e; font-size: 6pt; padding: 1.5px 5px; border-radius: 3px; display: inline-block; margin: 1px;">OHADA</span>
+          <span class="tag" style="background: #f0ece0; color: #6b5b3e; font-size: 6pt; padding: 1.5px 5px; border-radius: 3px; display: inline-block; margin: 1px;">Audit financier</span>
+          <span class="tag" style="background: #f0ece0; color: #6b5b3e; font-size: 6pt; padding: 1.5px 5px; border-radius: 3px; display: inline-block; margin: 1px;">Contrôle de gestion</span>
+          <span class="tag" style="background: #f0ece0; color: #6b5b3e; font-size: 6pt; padding: 1.5px 5px; border-radius: 3px; display: inline-block; margin: 1px;">Contrôle interne</span>
+          <span class="tag" style="background: #f0ece0; color: #6b5b3e; font-size: 6pt; padding: 1.5px 5px; border-radius: 3px; display: inline-block; margin: 1px;">Due diligence</span>
+          <span class="tag" style="background: #f0ece0; color: #6b5b3e; font-size: 6pt; padding: 1.5px 5px; border-radius: 3px; display: inline-block; margin: 1px;">Fiscalité</span>
+          <span class="tag" style="background: #f0ece0; color: #6b5b3e; font-size: 6pt; padding: 1.5px 5px; border-radius: 3px; display: inline-block; margin: 1px;">Trésorerie</span>
+          <span class="tag" style="background: #f0ece0; color: #6b5b3e; font-size: 6pt; padding: 1.5px 5px; border-radius: 3px; display: inline-block; margin: 1px;">Business plans</span>
+          <span class="tag" style="background: #f0ece0; color: #6b5b3e; font-size: 6pt; padding: 1.5px 5px; border-radius: 3px; display: inline-block; margin: 1px;">Consolidation</span>
+          <span class="tag" style="background: #f0ece0; color: #6b5b3e; font-size: 6pt; padding: 1.5px 5px; border-radius: 3px; display: inline-block; margin: 1px;">Restructuration</span>
+          <span class="tag" style="background: #f0ece0; color: #6b5b3e; font-size: 6pt; padding: 1.5px 5px; border-radius: 3px; display: inline-block; margin: 1px;">Reporting</span>
+        </div>
+        <div style="margin-bottom: 5px;">
+          <p style="font-size: 7.5pt; color: #6b8a6b; margin-bottom: 3px; font-weight: 500;">Académique</p>
+          <span class="tag" style="background: #e8ece8; color: #3e5b4a; font-size: 6pt; padding: 1.5px 5px; border-radius: 3px; display: inline-block; margin: 1px;">Méthodologie de recherche</span>
+          <span class="tag" style="background: #e8ece8; color: #3e5b4a; font-size: 6pt; padding: 1.5px 5px; border-radius: 3px; display: inline-block; margin: 1px;">Encadrement mémoires</span>
+          <span class="tag" style="background: #e8ece8; color: #3e5b4a; font-size: 6pt; padding: 1.5px 5px; border-radius: 3px; display: inline-block; margin: 1px;">Normes APA/Harvard</span>
+          <span class="tag" style="background: #e8ece8; color: #3e5b4a; font-size: 6pt; padding: 1.5px 5px; border-radius: 3px; display: inline-block; margin: 1px;">Revue de littérature</span>
+          <span class="tag" style="background: #e8ece8; color: #3e5b4a; font-size: 6pt; padding: 1.5px 5px; border-radius: 3px; display: inline-block; margin: 1px;">Analyse statistique</span>
+          <span class="tag" style="background: #e8ece8; color: #3e5b4a; font-size: 6pt; padding: 1.5px 5px; border-radius: 3px; display: inline-block; margin: 1px;">Relecture critique</span>
+          <span class="tag" style="background: #e8ece8; color: #3e5b4a; font-size: 6pt; padding: 1.5px 5px; border-radius: 3px; display: inline-block; margin: 1px;">Supports pédagogiques</span>
+          <span class="tag" style="background: #e8ece8; color: #3e5b4a; font-size: 6pt; padding: 1.5px 5px; border-radius: 3px; display: inline-block; margin: 1px;">Enseignement supérieur</span>
+        </div>
+        <div style="margin-bottom: 5px;">
+          <p style="font-size: 7.5pt; color: #7a6b8a; margin-bottom: 3px; font-weight: 500;">Management</p>
+          <span class="tag" style="background: #ece8f0; color: #5b4a6b; font-size: 6pt; padding: 1.5px 5px; border-radius: 3px; display: inline-block; margin: 1px;">Management d'équipe</span>
+          <span class="tag" style="background: #ece8f0; color: #5b4a6b; font-size: 6pt; padding: 1.5px 5px; border-radius: 3px; display: inline-block; margin: 1px;">Conduite du changement</span>
+          <span class="tag" style="background: #ece8f0; color: #5b4a6b; font-size: 6pt; padding: 1.5px 5px; border-radius: 3px; display: inline-block; margin: 1px;">GRH</span>
+          <span class="tag" style="background: #ece8f0; color: #5b4a6b; font-size: 6pt; padding: 1.5px 5px; border-radius: 3px; display: inline-block; margin: 1px;">RSE et gouvernance</span>
+          <span class="tag" style="background: #ece8f0; color: #5b4a6b; font-size: 6pt; padding: 1.5px 5px; border-radius: 3px; display: inline-block; margin: 1px;">Formation</span>
+          <span class="tag" style="background: #ece8f0; color: #5b4a6b; font-size: 6pt; padding: 1.5px 5px; border-radius: 3px; display: inline-block; margin: 1px;">Stratégie</span>
+        </div>
+        <div>
+          <p style="font-size: 7.5pt; color: #8a6b6b; margin-bottom: 3px; font-weight: 500;">Transversal</p>
+          <span class="tag" style="background: #f0e8e8; color: #6b4a4a; font-size: 6pt; padding: 1.5px 5px; border-radius: 3px; display: inline-block; margin: 1px;">Droit des affaires</span>
+          <span class="tag" style="background: #f0e8e8; color: #6b4a4a; font-size: 6pt; padding: 1.5px 5px; border-radius: 3px; display: inline-block; margin: 1px;">Droit du travail</span>
+          <span class="tag" style="background: #f0e8e8; color: #6b4a4a; font-size: 6pt; padding: 1.5px 5px; border-radius: 3px; display: inline-block; margin: 1px;">Droit fiscal</span>
+          <span class="tag" style="background: #f0e8e8; color: #6b4a4a; font-size: 6pt; padding: 1.5px 5px; border-radius: 3px; display: inline-block; margin: 1px;">Marketing</span>
+          <span class="tag" style="background: #f0e8e8; color: #6b4a4a; font-size: 6pt; padding: 1.5px 5px; border-radius: 3px; display: inline-block; margin: 1px;">Économie internationale</span>
+          <span class="tag" style="background: #f0e8e8; color: #6b4a4a; font-size: 6pt; padding: 1.5px 5px; border-radius: 3px; display: inline-block; margin: 1px;">Gestion santé</span>
+          <span class="tag" style="background: #f0e8e8; color: #6b4a4a; font-size: 6pt; padding: 1.5px 5px; border-radius: 3px; display: inline-block; margin: 1px;">Droit immobilier</span>
+          <span class="tag" style="background: #f0e8e8; color: #6b4a4a; font-size: 6pt; padding: 1.5px 5px; border-radius: 3px; display: inline-block; margin: 1px;">Droit bancaire</span>
+          <span class="tag" style="background: #f0e8e8; color: #6b4a4a; font-size: 6pt; padding: 1.5px 5px; border-radius: 3px; display: inline-block; margin: 1px;">Droit des assurances</span>
+          <span class="tag" style="background: #f0e8e8; color: #6b4a4a; font-size: 6pt; padding: 1.5px 5px; border-radius: 3px; display: inline-block; margin: 1px;">Droit de la sécurité sociale</span>
+          <span class="tag" style="background: #f0e8e8; color: #6b4a4a; font-size: 6pt; padding: 1.5px 5px; border-radius: 3px; display: inline-block; margin: 1px;">Politique économique</span>
+          <span class="tag" style="background: #f0e8e8; color: #6b4a4a; font-size: 6pt; padding: 1.5px 5px; border-radius: 3px; display: inline-block; margin: 1px;">Développement local</span>
+          <span class="tag" style="background: #f0e8e8; color: #6b4a4a; font-size: 6pt; padding: 1.5px 5px; border-radius: 3px; display: inline-block; margin: 1px;">Intégration régionale</span>
+          <span class="tag" style="background: #f0e8e8; color: #6b4a4a; font-size: 6pt; padding: 1.5px 5px; border-radius: 3px; display: inline-block; margin: 1px;">Rapports d'expertise</span>
+        </div>
+
+        <!-- Valeurs professionnelles -->
+        <div style="margin-top: 12px; padding-top: 8px; border-top: 0.5px solid #eae6de;">
+          <p class="sh">Valeurs professionnelles</p>
+          <div style="display: flex; gap: 12px; margin-top: 4px;">
+            <div style="flex: 1; text-align: center; padding: 5px 4px; background: rgba(184,149,106,0.05); border: 1px solid #e8e2d6; border-radius: 4px;">
+              <p style="font-family: 'Cormorant Garamond', serif; font-size: 10pt; font-weight: 600; color: #6b5b3e;">Rigueur</p>
+              <p style="font-size: 8pt; color: #8e8ea4; margin-top: 3px; line-height: 1.5;">Chaque livrable est vérifié, chaque chiffre est sourcé.</p>
+            </div>
+            <div style="flex: 1; text-align: center; padding: 5px 4px; background: rgba(184,149,106,0.05); border: 1px solid #e8e2d6; border-radius: 4px;">
+              <p style="font-family: 'Cormorant Garamond', serif; font-size: 10pt; font-weight: 600; color: #6b5b3e;">Discrétion</p>
+              <p style="font-size: 8pt; color: #8e8ea4; margin-top: 3px; line-height: 1.5;">Confidentialité absolue des données et des identités.</p>
+            </div>
+            <div style="flex: 1; text-align: center; padding: 5px 4px; background: rgba(184,149,106,0.05); border: 1px solid #e8e2d6; border-radius: 4px;">
+              <p style="font-family: 'Cormorant Garamond', serif; font-size: 10pt; font-weight: 600; color: #6b5b3e;">Proximité</p>
+              <p style="font-size: 8pt; color: #8e8ea4; margin-top: 3px; line-height: 1.5;">Collaboration étroite, disponibilité multi-fuseaux.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <p class="label">Page 3 sur 3</p>
+  </div>
+
+</div>
+</div>
+
+</body>
+</html>
